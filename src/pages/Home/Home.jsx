@@ -23,7 +23,7 @@ const Home = () => {
     }
   }, []);
 
-  if (showSplash) return <SplashScreen />;
+  // if (showSplash) return <SplashScreen />;
   return (
     <>
       <HeroSection />
