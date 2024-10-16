@@ -33,7 +33,7 @@ const HeroSection = () => {
       </div>
 
       <div className="px-10 py-10">
-        <div className="w-96 bg-backgroundSecondary  rounded-2xl p-4 space-y-10">
+        <div className="min-[576px]:w-96 bg-backgroundSecondary  rounded-2xl p-4 space-y-10">
           <div className="flex items-center justify-between gap-3">
             <span className="text-sm">Shipment Tracking</span>
             <label className="inline-flex items-center cursor-pointer">
