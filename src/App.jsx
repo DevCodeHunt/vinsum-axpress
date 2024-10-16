@@ -4,12 +4,14 @@ import { Toaster } from "react-hot-toast";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import ChatBot from "./components/ChatBot";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 
 export default function App() {
   return (
     <>
+      <ChatBot />
       <Navbar />
       <Suspense>
         <main>
