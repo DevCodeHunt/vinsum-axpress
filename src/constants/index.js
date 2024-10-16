@@ -63,3 +63,21 @@ export const aboutCards = [
       "We are here to help you with any questions, concerns, or issues you may have.",
   },
 ];
+
+export const serviceQuestions = [
+  {
+    title: "Worldwide Shipping",
+    description:
+      "Not only serving inter-city delivery, but Vinsum also serves inter-country delivery at an affordable cost and also includes taxes and so on.",
+  },
+  {
+    title: "Sea Shipping",
+    description:
+      "Not only serving inter-city delivery, but Vinsum also serves inter-country delivery at an affordable cost and also includes taxes and so on.",
+  },
+  {
+    title: "Ground Shipping",
+    description:
+      "Not only serving inter-city delivery, but Vinsum also serves inter-country delivery at an affordable cost and also includes taxes and so on.",
+  },
+];
