@@ -10,20 +10,15 @@ const Home = () => {
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
-    const splashShown = localStorage.getItem("splashShown");
+    const timer = setTimeout(() => {
+      setShowSplash(false); // Hide splash screen after 2 seconds
+    }, 2000);
 
-    if (splashShown) {
-      setShowSplash(true); // Show splash screen if it's not shown before
-      const timer = setTimeout(() => {
-        setShowSplash(false); // Hide splash screen after 5 seconds
-        localStorage.setItem("splashShown", "true");
-      }, 2000);
-
-      return () => clearTimeout(timer); // Cleanup the timer on component unmount
-    }
+    // Cleanup the timer on component unmount
+    return () => clearTimeout(timer);
   }, []);
 
-  // if (showSplash) return <SplashScreen />;
+  if (showSplash) return <SplashScreen />;
   return (
     <>
       <HeroSection />
