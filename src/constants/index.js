@@ -30,3 +30,36 @@ export const companyDetail = {
   linkedin: "https://www.linkedin.com/company/vinsum-axpress",
   youtube: "www.youtube.com/@vinsumaxpressindiapvtltd.8044",
 };
+
+export const aboutCards = [
+  {
+    title: "Real Time Tracking",
+    description:
+      "You can check the status of the shipment in the real time by telephone to the Vinsum hotline 18008333513",
+  },
+  {
+    title: "Pickup Delivery",
+    description:
+      "To add the convenience & security of your shipment, we provide a pick-up service that can make it easier for you.",
+  },
+  {
+    title: "Insurance Service",
+    description:
+      "Provides protection for yoyr package which adds security when shipping goods.",
+  },
+  {
+    title: "24 Hours",
+    description:
+      "Vinsum has outlets that are open 24 hours in major cities in India.",
+  },
+  {
+    title: "Packing",
+    description:
+      "We provide packaging services. tell our staff if you need this service, our staff will be happy to help you.",
+  },
+  {
+    title: "Customer Support",
+    description:
+      "We are here to help you with any questions, concerns, or issues you may have.",
+  },
+];
