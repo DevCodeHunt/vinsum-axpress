@@ -15,7 +15,7 @@ const Footer = () => {
           <h1 className="card-title text-center">
             LET US DELIVER YOUR PACKAGE TO ITS DESTINATION
           </h1>
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-4 flex-wrap">
             <Link
               to="#"
               className="btn primary-btn rounded-full px-8 py-3 w-fit font-medium "
