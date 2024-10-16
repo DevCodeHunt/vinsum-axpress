@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 
@@ -16,6 +17,7 @@ export default function App() {
           </Routes>
         </main>
       </Suspense>
+      <Footer />
       <Toaster />
     </>
   );

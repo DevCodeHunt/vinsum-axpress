@@ -60,6 +60,7 @@ const AboutSection2 = () => {
             // loop
             // autoPlay
             title="Video Indroduction"
+            poster="https://cdn.pixabay.com/photo/2014/09/11/22/00/dock-441989_1280.jpg"
             className="w-full h-full absolute inset-0 z-10 object-cover rounded-2xl"
           >
             <source src="/videos/vinsum-about.mp4" type="video/mp4"></source>
