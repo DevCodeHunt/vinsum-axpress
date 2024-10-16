@@ -20,12 +20,7 @@ const AboutSection2 = () => {
 
   return (
     <section className="wrapper my-10">
-      <Card
-        name="About us"
-        title="W"
-        description="Because Visnum will make it easier for you to send your package with the features we have."
-        hasBg
-      >
+      <Card hasBg>
         <div className="space-y-3 max-w-xl">
           <p className="card-name">About us</p>
           <h1 className="card-title">
