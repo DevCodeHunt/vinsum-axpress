@@ -31,3 +31,15 @@ body {
 .primary-btn {
   @apply bg-primary text-white;
 }
+
+.card-name {
+  @apply text-primary text-sm font-medium;
+}
+
+.card-title {
+  @apply md:text-5xl sm:text-4xl text-3xl font-bold uppercase leading-tight;
+}
+
+.card-description {
+  @apply text-sm text-text;
+}
