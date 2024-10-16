@@ -4,7 +4,7 @@ import { useCallback, useRef, useState } from "react";
 import { FaPause } from "react-icons/fa6";
 
 const AboutSection2 = () => {
-  const [isPaused, setIsPaused] = useState(false);
+  const [isPaused, setIsPaused] = useState(true);
   const videoRef = useRef(null);
 
   const togglePlayPause = useCallback(() => {
@@ -14,7 +14,7 @@ const AboutSection2 = () => {
       } else {
         videoRef.current.pause();
       }
-      setIsPaused(!isPaused);
+      setIsPaused((prevState) => !prevState);
     }
   }, [isPaused]);
 
