@@ -2,6 +2,8 @@ import { FaPlay } from "react-icons/fa";
 import Card from "../../../components/Card";
 import { useCallback, useRef, useState } from "react";
 import { FaPause } from "react-icons/fa6";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../../utils/motion";
 
 const AboutSection2 = () => {
   const [isPaused, setIsPaused] = useState(true);
@@ -22,19 +24,34 @@ const AboutSection2 = () => {
     <section className="wrapper my-10">
       <Card hasBg>
         <div className="space-y-3 max-w-xl">
-          <p className="card-name">About us</p>
-          <h1 className="card-title">
+          <motion.p
+            variants={fadeIn("down", "tween", 0.2, 1)}
+            className="card-name"
+          >
+            About us
+          </motion.p>
+          <motion.h1
+            variants={fadeIn("right", "tween", 0.2, 1)}
+            className="card-title"
+          >
             <span className="text-primary">Vinsum</span> Is One Of The Best
             Shipping And Logistics Companies.
-          </h1>
-          <p className="card-description">
+          </motion.h1>
+
+          <motion.p
+            variants={fadeIn("right", "tween", 0.2, 1)}
+            className="card-description"
+          >
             Making Vinsum as one of the best companies in shipping and logistics
             services by optimally serving the needs and interests of customers
             so that they are known in india and internationally.
-          </p>
+          </motion.p>
         </div>
 
-        <div className="my-8 flex gap-8 flex-wrap">
+        <motion.div
+          variants={fadeIn("right", "tween", 0.2, 1)}
+          className="my-8 flex gap-8 flex-wrap"
+        >
           <div className="flex flex-col gap-1">
             <h3 className="text-3xl font-bold">100K+</h3>
             <p className="text-sm text-text">Operational Vehicles</p>
@@ -51,9 +68,12 @@ const AboutSection2 = () => {
             <h3 className="text-3xl font-bold">3M+</h3>
             <p className="text-sm text-text">Happy Client</p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="rounded-2xl relative h-[280px]">
+        <motion.div
+          variants={fadeIn("up", "tween", 0.2, 1)}
+          className="rounded-2xl relative h-[280px]"
+        >
           <video
             ref={videoRef}
             muted
@@ -73,7 +93,7 @@ const AboutSection2 = () => {
               {isPaused ? <FaPlay /> : <FaPause />}
             </button>
           </div>
-        </div>
+        </motion.div>
       </Card>
     </section>
   );

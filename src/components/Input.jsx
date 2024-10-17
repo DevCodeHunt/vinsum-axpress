@@ -1,4 +1,12 @@
-const Input = ({ type = "text", id, name, placeholder, ...rest }) => {
+const Input = ({
+  type = "text",
+  id,
+  name,
+  placeholder,
+  value,
+  onChange,
+  ...rest
+}) => {
   return (
     <div>
       <input
@@ -6,8 +14,10 @@ const Input = ({ type = "text", id, name, placeholder, ...rest }) => {
         type={type}
         name={name}
         placeholder={placeholder}
+        value={value}
+        onChange={onChange}
         {...rest}
-        className="w-full py-3.5 text-sm bg-cardSecondary outline-none border-none rounded-2xl px-4 placeholder:text-zinc-400"
+        className="w-full py-3.5 text-sm bg-card outline-none border-none rounded-2xl px-4 placeholder:text-zinc-400"
       />
     </div>
   );

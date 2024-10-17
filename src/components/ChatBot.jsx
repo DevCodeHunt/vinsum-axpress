@@ -67,7 +67,7 @@ const ChatBot = () => {
 
       <div
         ref={chatbotRef}
-        className={`absolute bottom-14 rounded w-[400px] right-0  bg-card shadow drop-shadow-xl  ${
+        className={`absolute bottom-14 rounded min-[576px]:w-[400px] w-[300px] right-0  bg-card shadow drop-shadow-xl  ${
           show ? "opacity-100" : "opacity-0"
         }  transition-all duration-300`}
       >

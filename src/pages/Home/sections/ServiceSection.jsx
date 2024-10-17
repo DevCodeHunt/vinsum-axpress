@@ -2,6 +2,8 @@ import { useCallback, useState } from "react";
 import Card from "../../../components/Card";
 import { serviceQuestions } from "../../../constants";
 import { LuArrowDownRight } from "react-icons/lu";
+import { motion } from "framer-motion";
+import { fadeIn, fadeInOpacity, zoomIn } from "../../../utils/motion";
 
 const ServiceSection = () => {
   const [active, setActive] = useState(0);
@@ -15,33 +17,48 @@ const ServiceSection = () => {
     <section className="wrapper my-10">
       <Card>
         <div className="space-y-3 max-w-xl">
-          <p className="card-name">Our Service</p>
-          <h1 className="card-title">
+          <motion.p
+            variants={fadeIn("down", "tween", 0.2, 1)}
+            className="card-name"
+          >
+            Our Service
+          </motion.p>
+          <motion.h1
+            variants={fadeIn("right", "tween", 0.2, 1)}
+            className="card-title"
+          >
             Manage Your Package From Local To{" "}
             <span className="text-primary">The World</span>
-          </h1>
-          <p className="card-description">
+          </motion.h1>
+          <motion.p
+            variants={fadeIn("right", "tween", 0.2, 1)}
+            className="card-description"
+          >
             Vinsum is a logistics provider of integrated freight solutions.
             vinsum provides dedicated freight solution including: Less Than
             Truck Load, Full Truck Load, Wraehousing/Fullfillment, Drayage, and
             transloading
-          </p>
+          </motion.p>
         </div>
 
         <div className="grid lg:grid-cols-2 md:gap-12 gap-10 mt-8">
-          <div className="w-full h-[380px] overflow-hidden rounded-2xl">
+          <motion.div
+            variants={zoomIn(0.06, 1)}
+            className="w-full h-[380px] overflow-hidden rounded-2xl"
+          >
             <img
               src="https://cdn.pixabay.com/photo/2014/09/11/22/00/dock-441989_1280.jpg"
               alt="service"
               className="rounded-2xl object-cover w-full h-full hover:scale-105 transition duration-1000 ease-in-out cursor-pointer"
             />
-          </div>
+          </motion.div>
           <div className="space-y-4">
             {serviceQuestions.map((service, index) => {
               const title = service.title.split(" ");
               const isActive = active === index;
               return (
-                <div
+                <motion.div
+                  variants={fadeInOpacity(index * 0.6)}
                   key={index}
                   onClick={() => handleActive(index)}
                   className="border-t last:border-b border-text py-6"
@@ -54,14 +71,14 @@ const ServiceSection = () => {
                     <LuArrowDownRight
                       size={38}
                       className={`${
-                        isActive? "-rotate-90" : "rotate-0"
+                        isActive ? "-rotate-90" : "rotate-0"
                       } transition duration-500`}
                     />
                   </div>
-                  {isActive&& (
+                  {isActive && (
                     <p className="text-text mt-6">{service.description}</p>
                   )}
-                </div>
+                </motion.div>
               );
             })}
           </div>

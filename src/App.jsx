@@ -11,6 +11,7 @@ const Home = lazy(() => import("./pages/Home/Home"));
 export default function App() {
   return (
     <>
+      <ScrollToTop />
       <ChatBot />
       <Navbar />
       <Suspense>
@@ -21,7 +22,7 @@ export default function App() {
         </main>
       </Suspense>
       <Footer />
-      <ScrollToTop />
+
       <Toaster
         toastOptions={{
           duration: 3000,

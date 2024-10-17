@@ -7,14 +7,24 @@ import { FaFacebookF, FaPhoneAlt, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { AiFillInstagram } from "react-icons/ai";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../utils/motion";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
   const toggleMenu = useCallback(() => setMenu((prevMenu) => !prevMenu), []);
   return (
-    <header>
-      <div className="py-3 wrapper flex items-center justify-between gap-6">
+    <motion.header
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+    >
+      <motion.div
+        variants={fadeIn("down", "tween", 0.2, 1)}
+        className="py-3 wrapper flex items-center justify-between gap-6"
+      >
         <div>
           <a
             href={`tel:${companyDetail.contact}`}
@@ -52,8 +62,11 @@ const Navbar = () => {
             <FaYoutube size={20} />
           </a>
         </div>
-      </div>
-      <nav className="wrapper py-4 flex items-center justify-between md:gap-0 gap-6 sticky top-0 left-0 z-50">
+      </motion.div>
+      <motion.nav
+        variants={fadeIn("down", "tween", 0.2, 1)}
+        className="wrapper py-4 flex items-center justify-between md:gap-0 gap-6 sticky top-0 left-0 z-50"
+      >
         <Link to="/" className="text-3xl text-primary font-bold">
           vinsum
         </Link>
@@ -112,8 +125,8 @@ const Navbar = () => {
             </ul>
           </div>
         )}
-      </nav>
-    </header>
+      </motion.nav>
+    </motion.header>
   );
 };
 

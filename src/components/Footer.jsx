@@ -4,14 +4,25 @@ import { ROUTES } from "../utils/routes";
 import { companyDetail } from "../constants";
 import { FaMapMarkedAlt, FaPhoneAlt } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../utils/motion";
 
 const Footer = () => {
   const menuLink =
     "hover:text-primary text-sm text-text transition duration-300";
   return (
-    <footer className="wrapper my-10">
-      <div className=" bg-backgroundSecondary p-8 py-14 rounded-2xl">
-        <div className="flex flex-col max-w-xl mx-auto  items-center justify-center gap-10 w-full">
+    <footer className="wrapper my-10 overflow-hidden">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className=" bg-backgroundSecondary p-8 py-14 rounded-2xl"
+      >
+        <motion.div
+          variants={fadeIn("up", "tween", 0.2, 1)}
+          className="flex flex-col max-w-xl mx-auto  items-center justify-center gap-10 w-full"
+        >
           <h1 className="card-title text-center">
             LET US DELIVER YOUR PACKAGE TO ITS DESTINATION
           </h1>
@@ -32,11 +43,17 @@ const Footer = () => {
               <LuArrowRight />
             </Link>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="w-full h-[2px] bg-zinc-600 my-8 rounded-full"></div>
+        <motion.div
+          variants={fadeIn("up", "tween", 0.2, 1)}
+          className="w-full h-[2px] bg-zinc-600 my-8 rounded-full"
+        ></motion.div>
 
-        <div className="grid md:grid-cols-5 sm:grid-cols-2  gap-6">
+        <motion.div
+          variants={fadeIn("up", "tween", 0.2, 1)}
+          className="grid md:grid-cols-5 sm:grid-cols-2  gap-6"
+        >
           <div className="sm:col-span-2 ">
             <h1 className="text-2xl font-bold">vinsum</h1>
             <p className="text-sm text-text my-2 max-w-sm w-full">
@@ -189,13 +206,16 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-        </div>
+        </motion.div>
 
-        <p className="mt-8 text-sm text-text">
-            © Copyright 2022
-            <span className=" ml-1">Vinsum Axpress</span>. All Rights Reserved
-          </p>
-      </div>
+        <motion.p
+          variants={fadeIn("right", "tween", 0.2, 1)}
+          className="mt-8 text-sm text-text"
+        >
+          © Copyright 2022
+          <span className=" ml-1">Vinsum Axpress</span>. All Rights Reserved
+        </motion.p>
+      </motion.div>
     </footer>
   );
 };

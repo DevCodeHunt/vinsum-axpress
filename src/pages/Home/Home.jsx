@@ -5,6 +5,7 @@ import AboutSection2 from "./sections/AboutSection2";
 import HeroSection from "./sections/HeroSection";
 import OfficeSection from "./sections/OfficeSection";
 import ServiceSection from "./sections/ServiceSection";
+import AnimationWrapper from "../../components/AnimationWrapper";
 
 const Home = () => {
   const [showSplash, setShowSplash] = useState(true);
@@ -20,13 +21,13 @@ const Home = () => {
 
   if (showSplash) return <SplashScreen />;
   return (
-    <>
+    <AnimationWrapper>
       <HeroSection />
       <AboutSection />
       <AboutSection2 />
       <ServiceSection />
       <OfficeSection />
-    </>
+    </AnimationWrapper>
   );
 };
 
