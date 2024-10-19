@@ -1,13 +1,55 @@
 import { FaPlay } from "react-icons/fa";
 import Card from "../../../components/Card";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { FaPause } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../utils/motion";
+import CountUp from "react-countup";
 
 const AboutSection2 = () => {
+  const [isCounterSectionVisible, setIsCounterSectionVisible] = useState(false);
+  // const [isVideoSectionVisible, setIsVideoSectionVisible] = useState(false);
   const [isPaused, setIsPaused] = useState(true);
   const videoRef = useRef(null);
+
+  useEffect(() => {
+    // Create IntersectionObserver for the counter section
+    const counterSectionObserver = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsCounterSectionVisible(true); // Start counter animation
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    // Create IntersectionObserver for the video section
+    const videoSectionObserver = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          videoRef.current.play(); // Play video when visible
+          setIsPaused(false);
+        } else {
+          videoRef.current.pause(); // Pause video when out of view
+          setIsPaused(true);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    // Target the counter and video sections
+    const counterSection = document.querySelector("#counterSection");
+    const videoSection = document.querySelector("#videoSection");
+
+    if (counterSection) counterSectionObserver.observe(counterSection);
+    if (videoSection) videoSectionObserver.observe(videoSection);
+
+    // Cleanup observers on unmount
+    return () => {
+      if (counterSection) counterSectionObserver.unobserve(counterSection);
+      if (videoSection) videoSectionObserver.unobserve(videoSection);
+    };
+  }, []);
 
   const togglePlayPause = useCallback(() => {
     if (videoRef.current) {
@@ -49,23 +91,55 @@ const AboutSection2 = () => {
         </div>
 
         <motion.div
+          id="counterSection"
           variants={fadeIn("right", "tween", 0.2, 1)}
           className="my-8 flex gap-8 flex-wrap"
         >
           <div className="flex flex-col gap-1">
-            <h3 className="text-3xl font-bold">100K+</h3>
+            <h3 className="text-3xl font-bold">
+              {" "}
+              {isCounterSectionVisible ? (
+                <CountUp end={500} duration={2} />
+              ) : (
+                "0"
+              )}
+              +
+            </h3>
             <p className="text-sm text-text">Operational Vehicles</p>
           </div>
           <div className="flex flex-col gap-1">
-            <h3 className="text-3xl font-bold">1K+</h3>
+            <h3 className="text-3xl font-bold">
+              {isCounterSectionVisible ? (
+                <CountUp end={200} duration={2} />
+              ) : (
+                "0"
+              )}
+              +
+            </h3>
             <p className="text-sm text-text">Office</p>
           </div>
           <div className="flex flex-col gap-1">
-            <h3 className="text-3xl font-bold">10K+</h3>
+            <h3 className="text-3xl font-bold">
+              {" "}
+              {isCounterSectionVisible ? (
+                <CountUp end={100} duration={2} />
+              ) : (
+                "0"
+              )}
+              +
+            </h3>
             <p className="text-sm text-text">Years Experience</p>
           </div>
           <div className="flex flex-col gap-1">
-            <h3 className="text-3xl font-bold">3M+</h3>
+            <h3 className="text-3xl font-bold">
+              {" "}
+              {isCounterSectionVisible ? (
+                <CountUp end={300} duration={2} />
+              ) : (
+                "0"
+              )}
+              +
+            </h3>
             <p className="text-sm text-text">Happy Client</p>
           </div>
         </motion.div>

@@ -55,7 +55,15 @@ const Footer = () => {
           className="grid md:grid-cols-5 sm:grid-cols-2  gap-6"
         >
           <div className="sm:col-span-2 ">
-            <h1 className="text-2xl font-bold">vinsum</h1>
+            <div className="flex items-center gap-1">
+              <img
+                src="/images/logo.png"
+                alt="logo"
+                className="w-8 h-8 object-contain"
+              />
+              <h1 className="text-3xl font-bold">vinsum</h1>
+            </div>
+
             <p className="text-sm text-text my-2 max-w-sm w-full">
               The faster, easiest way to book and manage your international
               shipments.

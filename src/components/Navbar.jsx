@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { companyDetail, navLinks } from "../constants";
 import { LuMenu } from "react-icons/lu";
 import { useCallback, useState } from "react";
@@ -7,26 +7,16 @@ import { FaFacebookF, FaPhoneAlt, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { AiFillInstagram } from "react-icons/ai";
-import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "../utils/motion";
 import { ROUTES } from "../utils/routes";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
+  const { pathname } = useLocation();
 
   const toggleMenu = useCallback(() => setMenu((prevMenu) => !prevMenu), []);
   return (
-    <motion.header
-      variants={staggerContainer}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
-      className="border-b"
-    >
-      <motion.div
-        variants={fadeIn("down", "tween", 0.2, 1)}
-        className="py-3 wrapper flex items-center justify-between gap-6"
-      >
+    <header className="border-b sticky top-0 left-0 z-50 bg-neutral-50">
+      <div className="py-3 wrapper flex items-center justify-between gap-6">
         <div>
           <a
             href={`tel:${companyDetail.contact}`}
@@ -64,12 +54,17 @@ const Navbar = () => {
             <FaYoutube size={20} />
           </a>
         </div>
-      </motion.div>
-      <motion.nav
-        variants={fadeIn("down", "tween", 0.2, 1)}
-        className="wrapper py-4 flex items-center justify-between md:gap-0 gap-6 z-50"
-      >
-        <Link to="/" className="text-3xl text-primary font-bold">
+      </div>
+      <nav className="wrapper py-4 flex items-center justify-between md:gap-0 gap-6 z-50">
+        <Link
+          to="/"
+          className="text-3xl text-primary font-bold flex items-center gap-1"
+        >
+          <img
+            src="/images/logo.png"
+            alt="logo"
+            className="w-7 h-7 object-contain"
+          />
           vinsum
         </Link>
         <button
@@ -85,14 +80,23 @@ const Navbar = () => {
           {navLinks.map((link, index) => {
             return (
               <li key={index}>
-                <Link key={index} to={link.url} className="text-sm ">
+                <Link
+                  key={index}
+                  to={link.url}
+                  className={`text-sm ${
+                    pathname === link.url ? "text-primary" : ""
+                  }`}
+                >
                   {link.label}
                 </Link>{" "}
               </li>
             );
           })}
           <li>
-            <Link to={ROUTES.CONTACT} className="bg-primary text-white text-sm px-4 py-2.5 rounded-full hover:shadow-[0_1px_20px] hover:shadow-primary transition duration-300 ease-in-out">
+            <Link
+              to={ROUTES.CONTACT}
+              className="bg-primary text-white text-sm px-4 py-2.5 rounded-full hover:shadow-[0_1px_20px] hover:shadow-primary transition duration-300 ease-in-out"
+            >
               Get in touch
             </Link>
           </li>
@@ -109,7 +113,9 @@ const Navbar = () => {
                       onClick={() => setMenu(false)}
                       key={index}
                       to={link.url}
-                      className="text-sm "
+                      className={`text-sm ${
+                        pathname === link.url ? "text-primary" : ""
+                      }`}
                     >
                       {link.label}
                     </Link>{" "}
@@ -128,8 +134,8 @@ const Navbar = () => {
             </ul>
           </div>
         )}
-      </motion.nav>
-    </motion.header>
+      </nav>
+    </header>
   );
 };
 

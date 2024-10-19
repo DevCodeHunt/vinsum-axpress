@@ -67,11 +67,11 @@ const ChatBot = () => {
 
       <div
         ref={chatbotRef}
-        className={`absolute bottom-14 rounded min-[576px]:w-[400px] w-[300px] right-0  bg-card shadow drop-shadow-xl  ${
+        className={`absolute bottom-14 rounded min-[576px]:w-[400px] w-[300px] right-0  bg-white shadow drop-shadow-xl  ${
           show ? "opacity-100" : "opacity-0"
         }  transition-all duration-300`}
       >
-        <div className="h-16 border-b border-text absolute left-0 right-0 top-0 bg-card z-10"></div>
+        <div className="h-16 border-b border-neutral-200 absolute left-0 right-0 top-0 bg-white z-10"></div>
         <div className="p-2 max-h-[460px] pt-20 pb-20 space-y-4 overflow-y-auto no-scrollbar">
           <Message />
           <Message isUser />
@@ -88,7 +88,7 @@ const ChatBot = () => {
         )}
         <form
           onSubmit={formik.handleSubmit}
-          className="left-0 right-0 h-16 p-4 absolute bottom-0 w-full border-t flex items-center gap-2 border-text bg-card z-10"
+          className="left-0 right-0 h-16 p-4 absolute bottom-0 w-full border-t border-neutral-200 flex items-center gap-2 bg-white z-10"
         >
           <div className="relative h-10 rounded border-text flex-1 border">
             <input
@@ -99,23 +99,12 @@ const ChatBot = () => {
               placeholder="Write your message..."
               className="h-full resize-none overflow-hidden bg-transparent outline-none w-full text-sm pl-2 pr-16 placeholder:text-text"
             />
-            <label className="absolute top-1/2 -translate-y-1/2 right-2 cursor-pointer">
-              {" "}
-              <MdAttachFile size={20} />
-              <input type="file" hidden multiple onChange={handleFileUpload} />
-            </label>
-            <button
-              type="button"
-              onClick={toggleShowPicker}
-              className="absolute top-1/2 -translate-y-1/2 right-8"
-            >
-              {" "}
-              <MdOutlineEmojiEmotions size={20} />
-            </button>
+            
+           
           </div>
           <button
             type="submit"
-            className="bg-primary h-10 rounded w-10 flex items-center justify-center"
+            className="bg-primary h-10 text-white rounded w-10 flex items-center justify-center"
           >
             {" "}
             <BsSendFill />
@@ -130,7 +119,7 @@ const Message = ({ isUser }) => {
   return (
     <div className="">
       <p
-        className={`text-sm  bg-cardSecondary p-4  rounded-3xl ${
+        className={`text-sm  bg-foreground p-4  rounded-3xl ${
           isUser ? "rounded-br-none" : "rounded-bl-none"
         }`}
       >
