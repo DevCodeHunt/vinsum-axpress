@@ -1,5 +1,3 @@
-import { LuArrowRight } from "react-icons/lu";
-import { Link } from "react-router-dom";
 import Input from "../../../components/Input";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../../utils/motion";

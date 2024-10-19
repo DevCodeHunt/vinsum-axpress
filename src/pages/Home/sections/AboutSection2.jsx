@@ -1,7 +1,7 @@
-import { FaPlay } from "react-icons/fa";
+// import { FaPlay } from "react-icons/fa";
 import Card from "../../../components/Card";
-import { useCallback, useEffect, useRef, useState } from "react";
-import { FaPause } from "react-icons/fa6";
+import { useEffect, useRef, useState } from "react";
+// import { FaPause } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../utils/motion";
 import CountUp from "react-countup";
@@ -51,16 +51,16 @@ const AboutSection2 = () => {
     };
   }, []);
 
-  const togglePlayPause = useCallback(() => {
-    if (videoRef.current) {
-      if (isPaused) {
-        videoRef.current.play();
-      } else {
-        videoRef.current.pause();
-      }
-      setIsPaused((prevState) => !prevState);
-    }
-  }, [isPaused]);
+  // const togglePlayPause = useCallback(() => {
+  //   if (videoRef.current) {
+  //     if (isPaused) {
+  //       videoRef.current.play();
+  //     } else {
+  //       videoRef.current.pause();
+  //     }
+  //     setIsPaused((prevState) => !prevState);
+  //   }
+  // }, [isPaused]);
 
   return (
     <section className="wrapper my-10">
