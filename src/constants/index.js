@@ -15,8 +15,8 @@ export const navLinks = [
     url: ROUTES.SERVICE,
   },
   {
-    label: "Contact",
-    url: ROUTES.CONTACT,
+    label: "Career",
+    url: ROUTES.CAREER,
   },
 ];
 
