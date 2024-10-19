@@ -20,10 +20,11 @@ const Navbar = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
+      className="bg-white shadow"
     >
       <motion.div
         variants={fadeIn("down", "tween", 0.2, 1)}
-        className="py-3 wrapper flex items-center justify-between gap-6"
+        className="py-3 wrapper flex items-center justify-between gap-6 border-b"
       >
         <div>
           <a
@@ -65,7 +66,7 @@ const Navbar = () => {
       </motion.div>
       <motion.nav
         variants={fadeIn("down", "tween", 0.2, 1)}
-        className="wrapper py-4 flex items-center justify-between md:gap-0 gap-6 sticky top-0 left-0 z-50"
+        className="wrapper py-4 flex items-center justify-between md:gap-0 gap-6 z-50"
       >
         <Link to="/" className="text-3xl text-primary font-bold">
           vinsum
@@ -98,7 +99,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {menu && (
-          <div className="min-h-40 bg-background absolute top-16 left-0 right-0 w-full z-50">
+          <div className="min-h-40 bg-white shadow drop-shadow absolute top-16 left-0 right-0 w-full z-50">
             <ul className="flex flex-col items-center justify-center gap-6 py-10">
               {navLinks.map((link, index) => {
                 return (

@@ -66,10 +66,10 @@ const HeroSection = () => {
       <div className="px-10 py-10">
         <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
-          className="min-[576px]:w-96 bg-backgroundSecondary  rounded-2xl p-4 space-y-10"
+          className="min-[576px]:w-96 border shadow  rounded-2xl p-4 space-y-10"
         >
           <div className="flex items-center justify-between gap-3">
-            <span className="text-sm">Shipment Tracking</span>
+            <span className="text-sm font-medium">Shipment Tracking</span>
             <label className="inline-flex items-center cursor-pointer">
               <input
                 type="checkbox"
@@ -77,16 +77,16 @@ const HeroSection = () => {
                 onChange={handleToggleTracking}
                 className="sr-only peer"
               />
-              <div className="relative w-[52px] h-7 bg-[#272727] rounded-full peer  peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-primary after:rounded-full after:h-6 after:w-6 after:transition-all"></div>
+              <div className="relative w-[52px] h-7 bg-neutral-200 rounded-full cursor-pointer peer  peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-primary after:rounded-full after:h-6 after:w-6 after:transition-all"></div>
             </label>
-            <span className="text-sm">Shipment Rate</span>
+            <span className="text-sm font-medium">Shipment Rate</span>
           </div>
 
           <form
             onSubmit={formik.handleSubmit}
-            className="bg-[#292929] rounded-2xl p-4 space-y-3"
+            className="bg-background rounded-2xl p-4 space-y-3"
           >
-            <h3>{isTracking ? "Shipment rate" : "Track Shipment"}</h3>
+            <h3 className="font-medium">{isTracking ? "Shipment rate" : "Track Shipment"}</h3>
             <Input
               id="code"
               name="code"

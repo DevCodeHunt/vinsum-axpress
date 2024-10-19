@@ -5,8 +5,13 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import ChatBot from "./components/ChatBot";
+import { ROUTES } from "./utils/routes";
 
 const Home = lazy(() => import("./pages/Home/Home"));
+const About = lazy(() => import("./pages/About"));
+const Service = lazy(() => import("./pages/Service"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Career = lazy(() => import("./pages/Career"));
 
 export default function App() {
   return (
@@ -18,6 +23,10 @@ export default function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path={ROUTES.ABOUT} element={<About />} />
+            <Route path={ROUTES.SERVICE} element={<Service />} />
+            <Route path={ROUTES.CONTACT} element={<Contact />} />
+            <Route path={ROUTES.CAREER} element={<Career />} />
           </Routes>
         </main>
       </Suspense>

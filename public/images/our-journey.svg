@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 595.28 841.89">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        font-family: Poppins-Bold, Poppins;
+        font-size: 13.55px;
+        font-weight: 700;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #231f20;
+      }
+
+      .cls-4 {
+        font-family: Poppins-Medium, Poppins;
+        font-size: 9.18px;
+        font-weight: 500;
+      }
+
+      .cls-5 {
+        stroke-dasharray: 12.07 12.07;
+      }
+
+      .cls-5, .cls-6 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-7 {
+        fill: #fff;
+      }
+
+      .cls-8, .cls-9, .cls-10 {
+        fill: #ed1c24;
+      }
+
+      .cls-11 {
+        fill: #ecb545;
+      }
+
+      .cls-12 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
+      }
+
+      .cls-10 {
+        letter-spacing: 0em;
+      }
+
+      .cls-13 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="63.44" y1="447.79" x2="487.24" y2="447.79" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ed2024"/>
+      <stop offset="1" stop-color="#690c0d"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="451.03" y1="178.49" x2="524.89" y2="178.49" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="201.48" y1="704.64" x2="275.34" y2="704.64" xlink:href="#linear-gradient"/>
+  </defs>
+  <path class="cls-13" d="M462.11,199.24s-27.98,66.24-132.49,14.85c-104.51-51.4-225.57-39.4-258.7,50.25s53.11,141.05,75.38,147.91c22.27,6.85,65.29,12.94,97.65,3.81s141.25-52.92,185.03-4.95c0,0,46.45,29.7,15.99,97.46-30.46,67.77-122.21,21.7-122.21,21.7,0,0-78.43-34.26-133.63-27.79s-81.47,44.16-84.52,92.51,42.64,108.88,101.65,116.88l7.23-26.65s-53.3-8.38-75-60.91c-21.7-52.54,24.37-86.04,24.37-86.04,0,0,38.07-32.74,131.35,9.52,93.28,42.26,146.19,13.71,164.85-13.33,18.66-27.03,35.03-84.52,6.47-126.02-28.55-41.5-93.17-61.48-197.21-26.65-104.04,34.83-150.38-16.75-154.95-22.46s-48.73-63.2,1.52-114.21c50.25-51.02,136.68-27.41,136.68-27.41,0,0,50.25,12.94,62.06,20.56s127.16,57.49,173.61-28.17l-25.13-10.85Z"/>
+  <text class="cls-2" transform="translate(147.95 717.67)"><tspan class="cls-3" x="0" y="0">20</tspan><tspan class="cls-10" x="16.57" y="0">02</tspan></text>
+  <text class="cls-4" transform="translate(129.92 731.87)"><tspan x="0" y="0">We started our </tspan><tspan x="-9.45" y="11.01">journey into courier</tspan><tspan x="-13.88" y="22.03" xml:space="preserve"> and cargo Launched</tspan><tspan x="3.06" y="33.04" xml:space="preserve"> as Blaze Dart.</tspan></text>
+  <text class="cls-2" transform="translate(160.13 554.77)"><tspan class="cls-3" x="0" y="0">20</tspan><tspan class="cls-10" x="16.57" y="0">04</tspan></text>
+  <text class="cls-4" transform="translate(150.74 573.55)"><tspan x="0" y="0">Expanded</tspan><tspan x="11.74" y="11.01" xml:space="preserve"> into </tspan><tspan x=".02" y="22.03">Air Cargo.</tspan></text>
+  <text class="cls-2" transform="translate(287.07 571.68)"><tspan class="cls-3" x="0" y="0">20</tspan><tspan class="cls-10" x="16.57" y="0">09</tspan></text>
+  <text class="cls-4" transform="translate(251.5 584.64)"><tspan x="0" y="0" xml:space="preserve"> Rebranded as Axpress </tspan><tspan x="-.56" y="11.01">Logistics, and establish </tspan><tspan x="-4.67" y="22.03" xml:space="preserve"> Headquarter in Gurgaon.</tspan></text>
+  <text class="cls-2" transform="translate(501.88 458.38)"><tspan class="cls-3" x="0" y="0">20</tspan><tspan class="cls-10" x="16.57" y="0">15</tspan></text>
+  <text class="cls-4" transform="translate(488.59 471.74)"><tspan x="0" y="0">Opened 47+ </tspan><tspan x="-4.21" y="11.01">new branches.</tspan></text>
+  <text class="cls-2" transform="translate(371.37 411.85)"><tspan class="cls-3" x="0" y="0">20</tspan><tspan class="cls-8" x="16.57" y="0">17</tspan></text>
+  <text class="cls-4" transform="translate(337.77 425.5)"><tspan x="0" y="0">Integrated TMS, IMS,</tspan><tspan x="-6.87" y="11.01" xml:space="preserve"> WMS, and was the first</tspan><tspan x=".45" y="22.03" xml:space="preserve"> company that had </tspan><tspan x="-1.16" y="33.04">integrated with gov. </tspan><tspan x="22.55" y="44.05">E-way bill.</tspan></text>
+  <text class="cls-2" transform="translate(248.87 430.5)"><tspan class="cls-3" x="0" y="0">20</tspan><tspan class="cls-8" x="16.57" y="0">18</tspan></text>
+  <text class="cls-4" transform="translate(209.53 441.73)"><tspan x="0" y="0">First company to offer a </tspan><tspan x="13.06" y="11.01">one-stop logistics </tspan><tspan x=".96" y="22.03">&amp; supply chain solution.</tspan></text>
+  <text class="cls-2" transform="translate(100.08 416.96)"><tspan class="cls-3" x="0" y="0">20</tspan><tspan class="cls-8" x="16.57" y="0">19</tspan></text>
+  <text class="cls-4" transform="translate(81.69 430.72)"><tspan x="0" y="0" xml:space="preserve"> Entered into </tspan><tspan x="-9.54" y="11.01">non-automotive </tspan><tspan x="12.04" y="22.03">sectors.</tspan></text>
+  <text class="cls-2" transform="translate(98.44 300.88)"><tspan class="cls-3" x="0" y="0">20</tspan><tspan class="cls-9" x="16.57" y="0">20</tspan></text>
+  <text class="cls-4" transform="translate(143.11 288.14)"><tspan x="0" y="0">Added 25 </tspan><tspan x="-7" y="11.01">warehouses, </tspan><tspan x="-7.64" y="22.03">&amp; purchased </tspan><tspan x="-5.28" y="33.04">450+ trucks.</tspan></text>
+  <text class="cls-2" transform="translate(132.46 183.72)"><tspan class="cls-3" x="0" y="0">20</tspan><tspan class="cls-9" x="16.57" y="0">22</tspan></text>
+  <text class="cls-4" transform="translate(111.6 145.24)"><tspan x="0" y="0">Completed a ₹400 </tspan><tspan x="-10.04" y="11.01">crore Tata CCP project, </tspan><tspan x="-12.52" y="22.03">&amp; added 200 new trucks.</tspan></text>
+  <text class="cls-2" transform="translate(291.61 256.55)"><tspan class="cls-3" x="0" y="0">20</tspan><tspan class="cls-8" x="16.57" y="0">23</tspan></text>
+  <text class="cls-4" transform="translate(278 271.42)"><tspan x="0" y="0" xml:space="preserve"> 3X turnover</tspan><tspan x="3.27" y="11.01">from 2020.</tspan></text>
+  <text class="cls-2" transform="translate(477.53 251.93)"><tspan class="cls-3" x="0" y="0">20</tspan><tspan class="cls-8" x="16.57" y="0">24</tspan></text>
+  <text class="cls-4" transform="translate(441.21 264.57)"><tspan x="0" y="0" xml:space="preserve"> Expanded our  railway  </tspan><tspan x="4.5" y="11.01">network in IR &amp; DFC &amp; </tspan><tspan x="-8" y="22.03">started inplant packaging, </tspan><tspan x="18.56" y="33.04">manufacturing.</tspan></text>
+  <text class="cls-2" transform="translate(437.87 566.75)"><tspan class="cls-3" x="0" y="0">20</tspan><tspan class="cls-10" x="16.57" y="0">12</tspan></text>
+  <text class="cls-4" transform="translate(424.5 577.85)"><tspan x="0" y="0" xml:space="preserve">  Introduced </tspan><tspan x="-5.48" y="11.01">Green Axpress </tspan><tspan x="-27.19" y="22.03">(returnable packaging).</tspan></text>
+  <g>
+    <path class="cls-6" d="M477.53,202.38s-.98,1.99-3.1,5.13"/>
+    <path class="cls-5" d="M466.92,216.94c-19.14,20.75-66.36,51.46-159,5.14-128.49-64.25-197.88,8.57-197.88,8.57,0,0-59.96,41.12-17.13,126.78,42.83,85.66,168.75,37.69,168.75,37.69,0,0,142.2-59.11,200.45,28.27,0,0,34.26,75.38-38.55,125.92,0,0-50.54,28.27-129.35-13.71-78.81-41.97-135.34-11.99-143.91-3.43-8.57,8.57-66.82,70.24,8.57,144.77,0,0,27.54,21.95,58.24,26.77"/>
+    <path class="cls-6" d="M223.12,704.42c1.99.16,3.99.23,6,.22"/>
+  </g>
+  <g>
+    <circle class="cls-7" cx="450.21" cy="230.13" r="5.14"/>
+    <circle class="cls-11" cx="450.21" cy="230.13" r="3.21"/>
+  </g>
+  <g>
+    <circle class="cls-7" cx="313.84" cy="224.99" r="5.14"/>
+    <circle class="cls-11" cx="313.84" cy="224.99" r="3.21"/>
+  </g>
+  <g>
+    <circle class="cls-7" cx="152.83" cy="205.61" r="5.14"/>
+    <circle class="cls-11" cx="152.83" cy="205.61" r="3.21"/>
+  </g>
+  <g>
+    <circle class="cls-7" cx="77.49" cy="293.14" r="5.14"/>
+    <circle class="cls-11" cx="77.49" cy="293.14" r="3.21"/>
+  </g>
+  <g>
+    <circle class="cls-7" cx="122.89" cy="389.53" r="5.14"/>
+    <circle class="cls-11" cx="122.89" cy="389.53" r="3.21"/>
+  </g>
+  <g>
+    <circle class="cls-7" cx="262.41" cy="394.31" r="5.14"/>
+    <circle class="cls-11" cx="262.41" cy="394.31" r="3.21"/>
+  </g>
+  <g>
+    <circle class="cls-7" cx="394.49" cy="377.28" r="5.14"/>
+    <circle class="cls-11" cx="394.49" cy="377.28" r="3.21"/>
+  </g>
+  <g>
+    <circle class="cls-7" cx="468.75" cy="451.24" r="5.14"/>
+    <circle class="cls-11" cx="468.75" cy="451.24" r="3.21"/>
+  </g>
+  <g>
+    <circle class="cls-7" cx="438.25" cy="538.26" r="5.14"/>
+    <circle class="cls-11" cx="438.25" cy="538.26" r="3.21"/>
+  </g>
+  <g>
+    <circle class="cls-7" cx="308.71" cy="541.48" r="5.14"/>
+    <circle class="cls-11" cx="308.71" cy="541.48" r="3.21"/>
+  </g>
+  <g>
+    <circle class="cls-7" cx="160.13" cy="524.14" r="5.14"/>
+    <circle class="cls-11" cx="160.13" cy="524.14" r="3.21"/>
+  </g>
+  <g>
+    <circle class="cls-7" cx="174.61" cy="687.06" r="5.14"/>
+    <circle class="cls-11" cx="174.61" cy="687.06" r="3.21"/>
+  </g>
+  <circle class="cls-1" cx="487.96" cy="178.49" r="36.93"/>
+  <circle class="cls-12" cx="238.41" cy="704.64" r="36.93"/>
+</svg>

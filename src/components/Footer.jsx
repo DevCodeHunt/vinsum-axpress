@@ -17,7 +17,7 @@ const Footer = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className=" bg-backgroundSecondary p-8 py-14 rounded-2xl"
+        className=" bg-foreground p-8 py-14 rounded-2xl"
       >
         <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <Link
               to="#"
-              className="btn primary-btn rounded-full px-8 py-3 w-fit font-medium "
+              className="btn primary-btn rounded-full cursor-pointer px-8 py-3 w-fit font-medium "
             >
               LEARN MORE
               <LuArrowRight />
@@ -37,7 +37,7 @@ const Footer = () => {
 
             <Link
               to="#"
-              className="btn bg-white text-background rounded-full px-8 py-3 w-fit font-medium "
+              className="btn bg-white text-black cursor-pointer border rounded-full px-8 py-3 w-fit font-medium "
             >
               DOWNLOAD APP
               <LuArrowRight />
@@ -47,7 +47,7 @@ const Footer = () => {
 
         <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
-          className="w-full h-[2px] bg-zinc-600 my-8 rounded-full"
+          className="w-full h-[2px] bg-neutral-300 my-8 rounded-full"
         ></motion.div>
 
         <motion.div

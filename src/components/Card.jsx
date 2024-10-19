@@ -8,8 +8,8 @@ const Card = ({ hasBg, children }) => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className={`rounded-2xl md:px-8 px-6 py-8 overflow-hidden  ${
-        hasBg ? "bg-cardSecondary" : "bg-transparent"
+      className={`rounded-2xl md:px-8 px-6 py-8 overflow-hidden shadow  ${
+        hasBg ? "bg-background" : "bg-transparent border "
       }`}
     >
       {children}
