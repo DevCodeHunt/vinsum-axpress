@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { companyDetail, navLinks } from "../constants";
 import { LuMenu } from "react-icons/lu";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import { FaFacebookF, FaPhoneAlt, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -11,11 +11,27 @@ import { ROUTES } from "../utils/routes";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
+  const [navBg, setNavBg] = useState(false);
   const { pathname } = useLocation();
+
+  const changeNavBg = () => {
+    window.scrollY >= 80 ? setNavBg(true) : setNavBg(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNavBg);
+    return () => {
+      window.removeEventListener("scroll", changeNavBg);
+    };
+  }, []);
 
   const toggleMenu = useCallback(() => setMenu((prevMenu) => !prevMenu), []);
   return (
-    <header className={`border-b ${pathname === "/" ? "fixed" : "sticky bg-neutral-50"} top-0 left-0 right-0 z-50 `}>
+    <header
+      className={`border-b ${
+        pathname === "/" ? "fixed text-white" : "sticky bg-neutral-50"
+      } ${navBg ? "bg-neutral-50 !text-black" : ""} top-0 left-0 right-0 z-50 `}
+    >
       <div className="py-3 wrapper flex items-center justify-between gap-6">
         <div>
           <a
