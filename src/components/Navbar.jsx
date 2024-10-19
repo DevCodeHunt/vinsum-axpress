@@ -9,6 +9,7 @@ import { IoMdMail } from "react-icons/io";
 import { AiFillInstagram } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../utils/motion";
+import { ROUTES } from "../utils/routes";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -20,11 +21,11 @@ const Navbar = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className="bg-white shadow"
+      className="border-b"
     >
       <motion.div
         variants={fadeIn("down", "tween", 0.2, 1)}
-        className="py-3 wrapper flex items-center justify-between gap-6 border-b"
+        className="py-3 wrapper flex items-center justify-between gap-6"
       >
         <div>
           <a
@@ -91,9 +92,9 @@ const Navbar = () => {
             );
           })}
           <li>
-            <button className="bg-primary text-white text-sm px-4 py-2.5 rounded-full hover:shadow-[0_1px_20px] hover:shadow-primary transition duration-300 ease-in-out">
+            <Link to={ROUTES.CONTACT} className="bg-primary text-white text-sm px-4 py-2.5 rounded-full hover:shadow-[0_1px_20px] hover:shadow-primary transition duration-300 ease-in-out">
               Get in touch
-            </button>
+            </Link>
           </li>
         </ul>
 
@@ -116,12 +117,13 @@ const Navbar = () => {
                 );
               })}
               <li>
-                <button
+                <Link
+                  to={ROUTES.CONTACT}
                   onClick={() => setMenu(false)}
                   className="bg-primary text-white text-sm px-4 py-2.5 rounded-full hover:shadow-[0_1px_20px] hover:shadow-primary transition duration-300 ease-in-out"
                 >
                   Get in touch
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
