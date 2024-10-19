@@ -15,7 +15,7 @@ const Navbar = () => {
 
   const toggleMenu = useCallback(() => setMenu((prevMenu) => !prevMenu), []);
   return (
-    <header className="border-b sticky top-0 left-0 z-50 bg-neutral-50">
+    <header className={`border-b ${pathname === "/" ? "fixed" : "sticky bg-neutral-50"} top-0 left-0 right-0 z-50 `}>
       <div className="py-3 wrapper flex items-center justify-between gap-6">
         <div>
           <a
