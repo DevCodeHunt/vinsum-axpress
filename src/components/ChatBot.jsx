@@ -1,11 +1,6 @@
-import {
-  MdAttachFile,
-  MdOutlineChatBubble,
-  MdOutlineEmojiEmotions,
-} from "react-icons/md";
+import { MdOutlineChatBubble } from "react-icons/md";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { BsSendFill } from "react-icons/bs";
-import EmojiPicker from "emoji-picker-react";
 import { useFormik } from "formik";
 
 const ChatBot = () => {
@@ -13,7 +8,6 @@ const ChatBot = () => {
   const chatbotRef = useRef(null);
 
   const [show, setShow] = useState("");
-  const [showPicker, setShowPicker] = useState(false);
 
   const handleClickOutside = (event) => {
     if (
@@ -33,11 +27,6 @@ const ChatBot = () => {
   }, []);
   const toggleChatbot = useCallback(() => setShow((prev) => !prev), []);
 
-  const toggleShowPicker = useCallback(
-    () => setShowPicker((prev) => !prev),
-    []
-  );
-
   const formik = useFormik({
     initialValues: { message: "" },
     onSubmit: (values) => {
@@ -45,15 +34,7 @@ const ChatBot = () => {
     },
   });
 
-  const handleFileUpload = (event) => {
-    const files = event.target.files;
-    if (!files.length) return;
-  };
-
-  const onEmojiClick = (emojiObject) => {
-    formik.setFieldValue("message", formik.values.message + emojiObject.emoji);
-    setShowPicker(false);
-  };
+ 
 
   return (
     <div className="fixed bottom-4 right-4 z-[100]">
@@ -81,11 +62,7 @@ const ChatBot = () => {
           <Message />
           <Message />
         </div>
-        {showPicker && (
-          <div className="absolute top-10 z-[20]">
-            <EmojiPicker theme="dark" onEmojiClick={onEmojiClick} />
-          </div>
-        )}
+       
         <form
           onSubmit={formik.handleSubmit}
           className="left-0 right-0 h-16 p-4 absolute bottom-0 w-full border-t border-neutral-200 flex items-center gap-2 bg-white z-10"
@@ -99,8 +76,6 @@ const ChatBot = () => {
               placeholder="Write your message..."
               className="h-full resize-none overflow-hidden bg-transparent outline-none w-full text-sm pl-2 pr-16 placeholder:text-text"
             />
-            
-           
           </div>
           <button
             type="submit"
