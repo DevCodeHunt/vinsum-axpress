@@ -14,8 +14,7 @@ const HeroSection = () => {
 
   const formik = useFormik({
     initialValues: {
-      code: "",
-      rate: "",
+      docketNumber: "",
     },
     onSubmit: (values, { resetForm }) => {
       console.log(values);
@@ -41,9 +40,21 @@ const HeroSection = () => {
             <br className="md:inline-block hidden" /> OVER{" "}
             <span className="text-primary">THE WORLD.</span>
           </h1>
+
+          <h1 className="slider_catchphrase bg-foreground rounded p-1 px-1 w-fit mt-5">
+            <span className="slider">
+              <span className="slider__word">“Lightning-fast delivery!”</span>
+              <span className="slider__word">
+                “Efficient. Accurate. On-Time.”
+              </span>
+              <span className="slider__word">
+                “From Us to You, Absolutely Flawless!”
+              </span>
+            </span>
+          </h1>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           variants={fadeIn("left", "tween", 0.2, 1)}
           className="w-72 space-y-6"
         >
@@ -60,10 +71,10 @@ const HeroSection = () => {
               <LuArrowRight />
             </Link>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
 
-      <div className="px-10 py-10">
+      <div className="wrapper py-10">
         <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
           className="min-[576px]:w-96 border shadow  rounded-2xl p-4 space-y-10"
@@ -86,21 +97,17 @@ const HeroSection = () => {
             onSubmit={formik.handleSubmit}
             className="bg-background rounded-2xl p-4 space-y-3"
           >
-            <h3 className="font-medium">{isTracking ? "Shipment rate" : "Track Shipment"}</h3>
+            <h3 className="font-medium">
+              {isTracking ? "Shipment rate" : "Track Shipment"}
+            </h3>
             <Input
-              id="code"
-              name="code"
-              value={formik.values.code}
+              id="docketNumber"
+              name="docketNumber"
+              value={formik.values.docketNumber}
               onChange={formik.handleChange}
-              placeholder="Enter your shipment code"
+              placeholder="Enter your docket number"
             />
-            <Input
-              id="rate"
-              name="rate"
-              value={formik.values.rate}
-              onChange={formik.handleChange}
-              placeholder="Enter your shipment code"
-            />
+
             <button
               type="submit"
               className="primary-btn text-sm px-6 py-3.5 w-full rounded-2xl font-medium !mt-3"

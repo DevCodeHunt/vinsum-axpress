@@ -20,19 +20,16 @@ body {
   @apply w-full h-full bg-neutral-50 text-[#121212] font-poppins overflow-x-hidden;
 }
 
-
-
 .wrapper {
   @apply md:px-16 sm:px-8 px-4;
 }
-
 
 .btn {
   @apply flex items-center justify-center gap-1 text-sm rounded-full px-8 py-3 w-fit font-medium transition duration-300;
 }
 
 .primary-btn {
-  @apply bg-primary text-white ;
+  @apply bg-primary text-white;
 }
 
 .card-name {
@@ -49,4 +46,62 @@ body {
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+.slider_catchphrase {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  color: #a3a3a3;
+  font-weight: 500;
+}
+
+.slider {
+  position: relative;
+  height: 2em;
+  width: 350px;
+  overflow: hidden;
+  margin-left: 5px;
+}
+
+.slider__word {
+  font-weight: 500;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 2em;
+  transform: translateY(100%);
+  animation: slide 7.5s linear infinite;
+  color: #a91a1a;
+}
+
+.slider__word:nth-child(2) {
+  animation-delay: 2.49s;
+}
+
+.slider__word:nth-child(3) {
+  animation-delay: 5.01s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(100%);
+    opacity: 0.1;
+  }
+  15% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  45% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0.1;
+  }
 }

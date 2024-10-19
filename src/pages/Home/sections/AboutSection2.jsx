@@ -151,8 +151,19 @@ const AboutSection2 = () => {
           <video
             ref={videoRef}
             muted
-            // loop
-            // autoPlay
+            loop
+            autoPlay
+            title="Video Indroduction"
+            poster="https://cdn.pixabay.com/photo/2014/09/11/22/00/dock-441989_1280.jpg"
+            className="w-full h-full absolute bg-transparent inset-0 z-10 object-cover rounded-2xl"
+          >
+            <source src="/videos/growth-track.mp4" type="video/mp4"></source>
+          </video>
+          {/* <video
+            ref={videoRef}
+            muted
+            loop
+            autoPlay
             title="Video Indroduction"
             poster="https://cdn.pixabay.com/photo/2014/09/11/22/00/dock-441989_1280.jpg"
             className="w-full h-full absolute inset-0 z-10 object-cover rounded-2xl"
@@ -166,7 +177,7 @@ const AboutSection2 = () => {
             >
               {isPaused ? <FaPlay /> : <FaPause />}
             </button>
-          </div>
+          </div> */}
         </motion.div>
       </Card>
     </section>
