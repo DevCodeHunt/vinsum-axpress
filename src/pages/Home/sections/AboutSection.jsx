@@ -6,7 +6,7 @@ import { fadeIn, fadeInOpacity } from "../../../utils/motion";
 
 const AboutSection = () => {
   return (
-    <section className="wrapper my-10">
+    <section className="wrapper my-10 mt-24">
       <Card hasBg>
         <div className="space-y-3 max-w-xl">
           <motion.p
