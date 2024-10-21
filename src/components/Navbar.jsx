@@ -30,7 +30,7 @@ const Navbar = () => {
     <header
       className={` ${
         pathname === "/" ? "fixed text-white" : "sticky bg-neutral-50 border-b"
-      } ${navBg ? "bg-neutral-50 !text-black" : ""} top-0 left-0 right-0 z-50 `}
+      } ${navBg ? "bg-neutral-50 !text-black" : "isolate bg-white/20 shadow-lg ring-1 ring-black/5"} top-0 left-0 right-0 z-50 `}
     >
       <div className="py-3 wrapper flex items-center justify-between gap-6">
         <div>
@@ -79,9 +79,9 @@ const Navbar = () => {
           <img
             src="/images/logo.png"
             alt="logo"
-            className="w-7 h-7 object-contain"
+            className="w-8 h-8 object-contain"
           />
-          vinsum
+          VINSUM
         </Link>
         <button
           type="button"

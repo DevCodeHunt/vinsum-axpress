@@ -61,7 +61,7 @@ const Footer = () => {
                 alt="logo"
                 className="w-8 h-8 object-contain"
               />
-              <h1 className="text-3xl font-bold">vinsum</h1>
+              <h1 className="text-3xl font-bold">VINSUM</h1>
             </div>
 
             <p className="text-sm text-text my-2 max-w-sm w-full">

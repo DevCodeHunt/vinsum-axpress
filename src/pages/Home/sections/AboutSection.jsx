@@ -19,7 +19,7 @@ const AboutSection = () => {
             variants={fadeIn("right", "tween", 0.2, 1)}
             className="card-title"
           >
-            WHY CHOOSE US.
+            WHY US.
           </motion.h1>
 
           <motion.p
