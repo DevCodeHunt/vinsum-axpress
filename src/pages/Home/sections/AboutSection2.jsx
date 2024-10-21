@@ -84,7 +84,7 @@ const AboutSection2 = () => {
             variants={fadeIn("right", "tween", 0.2, 1)}
             className="card-description"
           >
-            Innovative Solutions for Every Journey: From real-time tracking to customized logistics plans, we adapt to your needs for maximum efficiency and transparency.
+            For the past two decades, Vinsum has proudly established itself as a leader in the logistics industry, consistently delivering excellence and innovative solutions.
           </motion.p>
         </div>
 

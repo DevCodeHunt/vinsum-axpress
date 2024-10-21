@@ -35,17 +35,23 @@ const TrackShipmentModal = () => {
               <div className="my-8 space-y-4">
                 <div className="flex items-center justify-between gap-4">
                   <span className="font-medium opacity-70">Dispatch Date:</span>
-                  <span className="font-medium">{shipment?.docketInfo[0]["Booking Date"]}</span>
+                  <span className="font-medium">
+                    {shipment?.docketInfo[0]["Booking Date"]}
+                  </span>
                 </div>
                 <div className="flex items-center justify-between gap-4">
                   <span className="font-medium opacity-70">Source Point:</span>
-                  <span className="font-medium">{shipment?.docketInfo[0]["C/nor City"]}</span>
+                  <span className="font-medium">
+                    {shipment?.docketInfo[0]["C/nor City"]}
+                  </span>
                 </div>
                 <div className="flex items-center justify-between gap-4">
                   <span className="font-medium opacity-70">
                     Destination Point:
                   </span>
-                  <span className="font-medium">{shipment?.docketInfo[0]["C/nee City"]}</span>
+                  <span className="font-medium">
+                    {shipment?.docketInfo[0]["C/nee City"]}
+                  </span>
                 </div>
               </div>
             </div>
@@ -149,8 +155,9 @@ const TrackShipmentModal = () => {
                       <td className="px-6 py-4">{invoice["Invoice No."]}</td>
                       <td className="px-6 py-4">{invoice["Date"]}</td>
                       <td className="px-6 py-4">
-                        {typeof invoice["Consignor Part No."] === "string" ? invoice["Consignor Part No."]: null
-                          }
+                        {typeof invoice["Consignor Part No."] === "string"
+                          ? invoice["Consignor Part No."]
+                          : null}
                       </td>
                       <td className="px-6 py-4">
                         {invoice["Consignee Part No."]}
