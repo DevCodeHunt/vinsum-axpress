@@ -6,8 +6,8 @@ const TrackShipmentModal = () => {
 
   if (!open && !shipment) return null;
   return (
-    <div className="fixed inset-0 bg-black/30 z-[1000] flex items-center justify-center">
-      <div className="relative bg-white max-w-7xl w-full h-3/4  overflow-y-auto scrollbar">
+    <div className="fixed inset-0 bg-black/30 z-[1000] flex items-center justify-center p-4">
+      <div className="relative bg-white max-w-4xl w-full max-h-[500px]  overflow-y-auto no-scrollbar rounded-2xl">
         <button
           type="button"
           onClick={onClose}
@@ -16,56 +16,53 @@ const TrackShipmentModal = () => {
           <X size={18} />
         </button>
         <div className="mt-16 px-4 w-full">
-          <div className="flex md:items-center md:flex-row flex-col md:gap-4 gap-8 justify-between w-full">
-            <img
-              src="/images/shipment.png"
-              alt="shipment"
-              className="w-[300px] object-contain"
-            />
-            <div className="flex-1">
-              <div className="flex items-center justify-between">
-                <h1 className="sm:text-2xl text-sm font-bold">
-                  Shipment Status
-                </h1>
-                <div className="bg-green-600 text-white px-4 py-2.5 rounded-full text-sm">
-                  Recived
-                </div>
+          <div className="flex-1">
+            <div className="flex items-center justify-between">
+              <h1 className="text-lg font-bold">Shipment Status</h1>
+              <div className="bg-green-600 text-white px-2 py-2 rounded-full text-xs font-medium">
+                Recived
               </div>
+            </div>
 
-              <div className="my-8 space-y-4">
-                <div className="flex items-center justify-between gap-4">
-                  <span className="font-medium opacity-70">Dispatch Date:</span>
-                  <span className="font-medium">{shipment?.docketInfo[0]["Booking Date"]}</span>
-                </div>
-                <div className="flex items-center justify-between gap-4">
-                  <span className="font-medium opacity-70">Source Point:</span>
-                  <span className="font-medium">{shipment?.docketInfo[0]["C/nor City"]}</span>
-                </div>
-                <div className="flex items-center justify-between gap-4">
-                  <span className="font-medium opacity-70">
-                    Destination Point:
-                  </span>
-                  <span className="font-medium">{shipment?.docketInfo[0]["C/nee City"]}</span>
-                </div>
+            <div className="my-4 space-y-2 text-sm">
+              <div className="flex items-center justify-between gap-4">
+                <span className="font-medium opacity-70">Dispatch Date:</span>
+                <span className="font-medium">
+                  {shipment?.docketInfo[0]["Booking Date"]}
+                </span>
+              </div>
+              <div className="flex items-center justify-between gap-4">
+                <span className="font-medium opacity-70">Source Point:</span>
+                <span className="font-medium">
+                  {shipment?.docketInfo[0]["C/nor City"]}
+                </span>
+              </div>
+              <div className="flex items-center justify-between gap-4">
+                <span className="font-medium opacity-70">
+                  Destination Point:
+                </span>
+                <span className="font-medium">
+                  {shipment?.docketInfo[0]["C/nee City"]}
+                </span>
               </div>
             </div>
           </div>
 
-          <div className="py-8">
+          <div className="py-2">
             <div className="flex items-center gap-2">
               <img
                 src="/images/shipment-progress.svg"
                 alt="shipment-progress"
-                className="sm:w-14 w-10"
+                className="w-8"
               />
-              <h1 className="sm:text-3xl text-sm font-bold">
+              <h1 className="text-lg font-bold">
                 Shipment Progress
               </h1>
             </div>
 
-            <div className="relative overflow-x-auto my-8">
+            <div className="relative overflow-x-auto my-4">
               <table className="w-full text-left border border-t-0 rounded-md">
-                <thead className="bg-neutral-100 text-sm rounded">
+                <thead className="bg-neutral-200 text-sm rounded">
                   <tr>
                     <th scope="col" className="px-6 py-3 whitespace-nowrap">
                       Docket No.
@@ -149,8 +146,9 @@ const TrackShipmentModal = () => {
                       <td className="px-6 py-4">{invoice["Invoice No."]}</td>
                       <td className="px-6 py-4">{invoice["Date"]}</td>
                       <td className="px-6 py-4">
-                        {typeof invoice["Consignor Part No."] === "string" ? invoice["Consignor Part No."]: null
-                          }
+                        {typeof invoice["Consignor Part No."] === "string"
+                          ? invoice["Consignor Part No."]
+                          : null}
                       </td>
                       <td className="px-6 py-4">
                         {invoice["Consignee Part No."]}
@@ -168,11 +166,11 @@ const TrackShipmentModal = () => {
               <img
                 src="/images/shipment-truck.svg"
                 alt="shipment-truck"
-                className="sm:w-14 w-10"
+                className="w-8"
               />
-              <h1 className="sm:text-3xl text-xl font-bold">Additional Info</h1>
+              <h1 className="text-lg font-bold">Additional Info</h1>
             </div>
-            <div className="relative overflow-x-auto my-8">
+            <div className="relative overflow-x-auto my-4">
               <table className="w-full text-left border border-t-0 rounded-md">
                 <thead className="bg-neutral-200 text-sm rounded">
                   <tr>

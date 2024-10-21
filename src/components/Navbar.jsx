@@ -32,7 +32,7 @@ const Navbar = () => {
         pathname === "/" ? "fixed text-white" : "sticky bg-neutral-50 border-b"
       } ${navBg ? "bg-neutral-50 !text-black" : " bg-white/20 shadow-lg"} top-0 left-0 right-0 w-full z-50`}
     >
-      <div className="py-3 wrapper flex items-center justify-between gap-6">
+      <div className="py-3 wrapper flex items-center justify-between gap-4">
         <div>
           <a
             href={`tel:${companyDetail.contact}`}
@@ -71,7 +71,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-      <nav className="wrapper py-4 flex items-center justify-between md:gap-0 gap-6">
+      <nav className="wrapper py-4 flex items-center justify-between md:gap-0 gap-6 h-16">
         <Link
           to="/"
           className="text-3xl text-primary font-bold flex items-center gap-1"
@@ -120,7 +120,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {menu && (
-          <div className="min-h-40 bg-white shadow drop-shadow absolute top-16 left-0 right-0 w-full z-50">
+          <div className="min-h-40 bg-white shadow drop-shadow absolute top-[105px] left-0 right-0 w-full z-50">
             <ul className="flex flex-col items-center justify-center gap-6 py-10">
               {navLinks.map((link, index) => {
                 return (
@@ -130,7 +130,7 @@ const Navbar = () => {
                       key={index}
                       to={link.url}
                       className={`text-sm ${
-                        pathname === link.url ? "text-primary" : ""
+                        pathname === link.url ? "text-primary" : "text-black"
                       }`}
                     >
                       {link.label}
