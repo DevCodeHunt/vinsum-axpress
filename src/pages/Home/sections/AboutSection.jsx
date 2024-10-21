@@ -26,8 +26,7 @@ const AboutSection = () => {
             variants={fadeIn("right", "tween", 0.2, 1)}
             className="card-description"
           >
-            Because Visnum will make it easier for you to send your package with
-            the features we have.
+            For the past two decades, Vinsum has proudly established itself as a leader in the logistics industry, consistently delivering excellence and innovative solutions.
           </motion.p>
         </div>
         <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-4 mt-10">
