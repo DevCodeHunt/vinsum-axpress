@@ -84,9 +84,7 @@ const AboutSection2 = () => {
             variants={fadeIn("right", "tween", 0.2, 1)}
             className="card-description"
           >
-            Making Vinsum as one of the best companies in shipping and logistics
-            services by optimally serving the needs and interests of customers
-            so that they are known in india and internationally.
+            Innovative Solutions for Every Journey: From real-time tracking to customized logistics plans, we adapt to your needs for maximum efficiency and transparency.
           </motion.p>
         </div>
 
@@ -99,30 +97,30 @@ const AboutSection2 = () => {
             <h3 className="text-3xl font-bold">
               {" "}
               {isCounterSectionVisible ? (
-                <CountUp end={500} duration={2} />
+                <CountUp end={700} duration={2} />
               ) : (
                 "0"
               )}
               +
             </h3>
-            <p className="text-sm text-text">Operational Vehicles</p>
+            <p className="text-sm text-text">Current Workforce</p>
           </div>
           <div className="flex flex-col gap-1">
             <h3 className="text-3xl font-bold">
               {isCounterSectionVisible ? (
-                <CountUp end={200} duration={2} />
+                <CountUp end={60} duration={2} />
               ) : (
                 "0"
               )}
               +
             </h3>
-            <p className="text-sm text-text">Office</p>
+            <p className="text-sm text-text">Office Locations</p>
           </div>
           <div className="flex flex-col gap-1">
             <h3 className="text-3xl font-bold">
               {" "}
               {isCounterSectionVisible ? (
-                <CountUp end={100} duration={2} />
+                <CountUp end={23} duration={2} />
               ) : (
                 "0"
               )}
@@ -134,24 +132,23 @@ const AboutSection2 = () => {
             <h3 className="text-3xl font-bold">
               {" "}
               {isCounterSectionVisible ? (
-                <CountUp end={300} duration={2} />
+                <CountUp end={500} duration={2} />
               ) : (
                 "0"
-              )}
+              )}  
               +
             </h3>
-            <p className="text-sm text-text">Happy Client</p>
+            <p className="text-sm text-text">Happy Clients</p>
           </div>
         </motion.div>
 
         <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
-          className="rounded-2xl relative h-[280px]"
+          className="rounded-2xl relative h-[400px]"
         >
           <video
             ref={videoRef}
             muted
-            loop
             autoPlay
             title="Video Indroduction"
             poster="https://cdn.pixabay.com/photo/2014/09/11/22/00/dock-441989_1280.jpg"

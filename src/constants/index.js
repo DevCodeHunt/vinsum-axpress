@@ -39,27 +39,27 @@ export const aboutCards = [
       "You can check the status of the shipment in the real time by telephone to the Vinsum hotline 18008333513",
   },
   {
-    title: "Pickup Delivery",
+    title: "Damage-free Delivery",
     description:
       "To add the convenience & security of your shipment, we provide a pick-up service that can make it easier for you.",
   },
   {
-    title: "Insurance Service",
+    title: "Customizable Packaging Service",
     description:
       "Provides protection for yoyr package which adds security when shipping goods.",
   },
   {
-    title: "24 Hours",
+    title: "Warehouse Services",
     description:
       "Vinsum has outlets that are open 24 hours in major cities in India.",
   },
   {
-    title: "Packing",
+    title: "Tech Driven Solutions",
     description:
       "We provide packaging services. tell our staff if you need this service, our staff will be happy to help you.",
   },
   {
-    title: "Customer Support",
+    title: "24/7 Customer Support",
     description:
       "We are here to help you with any questions, concerns, or issues you may have.",
   },
