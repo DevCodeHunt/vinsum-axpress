@@ -150,7 +150,6 @@ const AboutSection2 = () => {
             ref={videoRef}
             muted
             autoPlay
-            loop
             title="Video Indroduction"
             poster="https://cdn.pixabay.com/photo/2014/09/11/22/00/dock-441989_1280.jpg"
             className="w-full h-full absolute bg-transparent inset-0 z-10 object-cover rounded-2xl"

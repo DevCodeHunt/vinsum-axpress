@@ -101,7 +101,7 @@ const HeroSection = () => {
             >
               <div className="flex items-center justify-between gap-3">
                 <span className="text-sm font-medium text-white">
-                  Shipment Tracking
+                  Docket Search
                 </span>
                 <label className="inline-flex items-center cursor-pointer">
                   <input
@@ -113,7 +113,7 @@ const HeroSection = () => {
                   <div className="relative w-[52px] h-7 bg-neutral-200 rounded-full cursor-pointer peer  peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-primary after:rounded-full after:h-6 after:w-6 after:transition-all"></div>
                 </label>
                 <span className="text-sm font-medium text-white">
-                  Shipment Rate
+                  Invoice Search
                 </span>
               </div>
 
@@ -122,7 +122,7 @@ const HeroSection = () => {
                 className="bg-background rounded-2xl p-4 space-y-3 isolate bg-white/20 shadow-lg ring-1 ring-black/5"
               >
                 <h3 className="font-medium text-white">
-                  {isTracking ? "Shipment rate" : "Track Shipment"}
+                  {isTracking ? "Track Shipment" : "Track Shipment"}
                 </h3>
                 <Input
                   id="docketNumber"
