@@ -36,17 +36,17 @@ export const aboutCards = [
   {
     title: "Real Time Tracking",
     description:
-      "You can check the status of the shipment in the real time by telephone to the Vinsum hotline 18008333513",
+      "Experience immediate updates and reduced concerns. Prepare to engage with the future of logistics, where efficiency and reliability are paramount.",
   },
   {
     title: "Damage-free Delivery",
     description:
-      "To add the convenience & security of your shipment, we provide a pick-up service that can make it easier for you.",
+      "Count on us to ensure damage-free delivery with every shipment, setting the standard for excellence!",
   },
   {
-    title: "Customizable Packaging Service",
+    title: "Flexible Packaging Service",
     description:
-      "Provides protection for yoyr package which adds security when shipping goods.",
+      "We offer Versatile Packaging that provides limitless possibilities to meet the diverse needs of your organization effectively.",
   },
   {
     title: "Warehouse Services",
@@ -61,7 +61,7 @@ export const aboutCards = [
   {
     title: "24/7 Customer Support",
     description:
-      "We are here to help you with any questions, concerns, or issues you may have.",
+      "We are Here for You Around the Clock: Just a call away, our dedicated team is ready to assist 24/7",
   },
 ];
 
