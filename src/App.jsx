@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import ChatBot from "./components/ChatBot";
 import { ROUTES } from "./utils/routes";
+import TrackShipmentModal from "./components/modals/TrackShipmentModal";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -19,6 +20,7 @@ export default function App() {
       <ScrollToTop />
       <ChatBot />
       <Navbar />
+      <TrackShipmentModal />
       <Suspense>
         <main>
           <Routes>

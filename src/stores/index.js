@@ -9,3 +9,11 @@ export const useJobApplyStore = create((set) => ({
   setJob: (job) => set({ job }),
   clearJob: () => set({ job: null }),
 }));
+
+export const useTrackShipmentStore = create((set) => ({
+  open: false,
+  onOpen: () => set({ open: true }),
+  onClose: () => set({ open: false, shipment: null }),
+  shipment: null,
+  setShipment: (shipment) => set({ shipment }),
+}));

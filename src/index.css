@@ -48,6 +48,14 @@ body {
   display: none;
 }
 
+.navbar {
+  z-index: 50;
+}
+
+.track-shipment {
+  z-index: 100;
+}
+
 .slider_catchphrase {
   font-size: 1rem;
   display: flex;

@@ -30,7 +30,7 @@ const Navbar = () => {
     <header
       className={` ${
         pathname === "/" ? "fixed text-white" : "sticky bg-neutral-50 border-b"
-      } ${navBg ? "bg-neutral-50 !text-black" : "isolate bg-white/20 shadow-lg ring-1 ring-black/5"} top-0 left-0 right-0 z-50 `}
+      } ${navBg ? "bg-neutral-50 !text-black" : " bg-white/20 shadow-lg"} top-0 left-0 right-0 w-full z-50`}
     >
       <div className="py-3 wrapper flex items-center justify-between gap-6">
         <div>
@@ -71,7 +71,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-      <nav className="wrapper py-4 flex items-center justify-between md:gap-0 gap-6 z-50">
+      <nav className="wrapper py-4 flex items-center justify-between md:gap-0 gap-6">
         <Link
           to="/"
           className="text-3xl text-primary font-bold flex items-center gap-1"
