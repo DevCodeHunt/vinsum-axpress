@@ -24,7 +24,7 @@ const HeroSection = () => {
         toast.error(
           isTracking
             ? "Please enter your docket number"
-            : "Please enter your invoice number docket number"
+            : "Please enter your invoice number"
         );
         return;
       }
