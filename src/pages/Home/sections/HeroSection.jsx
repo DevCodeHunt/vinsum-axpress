@@ -6,6 +6,8 @@ import { useFormik } from "formik";
 import axios from "axios";
 import { useTrackShipmentStore } from "../../../stores";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
+import { LuArrowRight } from "react-icons/lu";
 //1000033772
 const HeroSection = () => {
   const [isTracking, setIsTracking] = useState(false);
@@ -82,7 +84,7 @@ const HeroSection = () => {
             </motion.div>
           </div>
 
-          <div className="py-10">
+          <div className="py-10 grid md:grid-cols-2 gap-6">
             <motion.div
               variants={fadeIn("up", "tween", 0.2, 1)}
               className="min-[576px]:w-96 border rounded-2xl p-4 space-y-10 bg-white text-black shadow isolate bg-white/20 shadow-lg ring-1 ring-black/5"
@@ -153,6 +155,25 @@ const HeroSection = () => {
                   )}
                 </button>
               </form>
+            </motion.div>
+
+            <motion.div
+              variants={fadeIn("left", "tween", 0.2, 1)}
+              className="w-72 space-y-6 md:ml-auto"
+            >
+              <p>
+                The faster, easiest way to book and manage your international
+                shipments.
+              </p>
+              <div>
+                <Link
+                  to="#"
+                  className="btn primary-btn rounded-full px-8 py-3 w-fit font-medium shadow-[0_0px_50px] shadow-blue-400/30 hover:shadow-blue-400/50 transotion duration-300"
+                >
+                  LEARN MORE
+                  <LuArrowRight />
+                </Link>
+              </div>
             </motion.div>
           </div>
         </div>
