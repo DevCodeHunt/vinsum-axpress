@@ -1,13 +1,32 @@
 import { X } from "lucide-react";
 import { useTrackShipmentStore } from "../../stores";
+import { useEffect, useRef } from "react";
 
 const TrackShipmentModal = () => {
   const { open, shipment, onClose } = useTrackShipmentStore();
+  const ref = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (ref.current && !ref.current.contains(event.target)) {
+        onClose();
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [onClose]);
 
   if (!open && !shipment) return null;
+
+  const status = shipment?.docketInfo[0]["Status"];
   return (
     <div className="fixed inset-0 bg-black/30 z-[1000] flex items-center justify-center p-4">
-      <div className="relative bg-white max-w-4xl w-full max-h-[500px]  overflow-y-auto no-scrollbar rounded-2xl">
+      <div
+        ref={ref}
+        onClick={(e) => e.stopPropagation()}
+        className="relative bg-white max-w-4xl w-full max-h-[500px]  overflow-y-auto no-scrollbar rounded-2xl"
+      >
         <button
           type="button"
           onClick={onClose}
@@ -19,8 +38,12 @@ const TrackShipmentModal = () => {
           <div className="flex-1">
             <div className="flex items-center justify-between">
               <h1 className="text-lg font-bold">Shipment Status</h1>
-              <div className="bg-green-600 text-white px-2 py-2 rounded-full text-xs font-medium">
-                Recived
+              <div
+                className={`${
+                  status === "Received" ? "bg-green-600" : "bg-[#ED7014]"
+                } text-white px-2 py-2 rounded-full text-xs font-medium`}
+              >
+                {status}
               </div>
             </div>
 

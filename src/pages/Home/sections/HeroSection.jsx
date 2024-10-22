@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useFormik } from "formik";
 import axios from "axios";
 import { useTrackShipmentStore } from "../../../stores";
+import toast from "react-hot-toast";
 //1000033772
 const HeroSection = () => {
   const [isTracking, setIsTracking] = useState(false);
@@ -19,11 +20,19 @@ const HeroSection = () => {
       docketNumber: "",
     },
     onSubmit: (values, { resetForm }) => {
+      if (values.docketNumber === "") {
+        toast.error(
+          isTracking
+            ? "Please enter your docket number"
+            : "Please enter your invoice number docket number"
+        );
+        return;
+      }
       if (values.docketNumber !== "") {
         setLoading(true);
         axios
           .get(
-            `https://testwebsiteapi.vinsumaxpress.com/api/DocketTracking?docketno=${values.docketNumber}&isDocket=${!isTracking}`
+            `https://testwebsiteapi.vinsumaxpress.com/api/DocketTracking?docketno=${values.docketNumber}&isDocket=${isTracking}`
           )
           .then((res) => {
             trackShipment.setShipment(res.data);
@@ -56,7 +65,6 @@ const HeroSection = () => {
                 <br className="md:inline-block hidden" /> OVER{" "}
                 <span className="text-primary">THE WORLD.</span>
               </h1>
-           
 
               <h1 className="slider_catchphrase bg-foreground rounded p-1 px-1 sm:w-fit w-full mt-5 isolate bg-white/20 shadow-lg ring-1 ring-black/5">
                 <span className="slider">
@@ -81,7 +89,7 @@ const HeroSection = () => {
             >
               <div className="flex items-center justify-between gap-3">
                 <span className="text-sm font-medium text-white">
-                  Docket Search
+                  Invoice Search
                 </span>
                 <label className="inline-flex items-center cursor-pointer">
                   <input
@@ -93,7 +101,7 @@ const HeroSection = () => {
                   <div className="relative w-[52px] h-7 bg-neutral-200 rounded-full cursor-pointer peer  peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-primary after:rounded-full after:h-6 after:w-6 after:transition-all"></div>
                 </label>
                 <span className="text-sm font-medium text-white">
-                  Invoice Search
+                  Docket Search
                 </span>
               </div>
 
@@ -111,8 +119,8 @@ const HeroSection = () => {
                   onChange={formik.handleChange}
                   placeholder={
                     isTracking
-                      ? "Enter your invoice number"
-                      : "Enter your docket number"
+                      ? "Enter your docket invoice number"
+                      : "Enter your invoice number"
                   }
                 />
 

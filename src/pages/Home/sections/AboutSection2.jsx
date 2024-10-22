@@ -70,7 +70,7 @@ const AboutSection2 = () => {
             variants={fadeIn("down", "tween", 0.2, 1)}
             className="card-name"
           >
-            About us
+            Our journey
           </motion.p>
           <motion.h1
             variants={fadeIn("right", "tween", 0.2, 1)}
@@ -84,7 +84,9 @@ const AboutSection2 = () => {
             variants={fadeIn("right", "tween", 0.2, 1)}
             className="card-description"
           >
-            For the past two decades, Vinsum has proudly established itself as a leader in the logistics industry, consistently delivering excellence and innovative solutions.
+            For the past two decades, Vinsum has proudly established itself as a
+            leader in the logistics industry, consistently delivering excellence
+            and innovative solutions.
           </motion.p>
         </div>
 
@@ -135,7 +137,7 @@ const AboutSection2 = () => {
                 <CountUp end={500} duration={2} />
               ) : (
                 "0"
-              )}  
+              )}
               +
             </h3>
             <p className="text-sm text-text">Happy Clients</p>
