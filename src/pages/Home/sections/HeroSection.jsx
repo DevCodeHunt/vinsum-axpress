@@ -161,16 +161,13 @@ const HeroSection = () => {
               variants={fadeIn("left", "tween", 0.2, 1)}
               className="w-72 space-y-6 md:ml-auto"
             >
-              <p>
-                The faster, easiest way to book and manage your international
-                shipments.
-              </p>
+              <p>Become a franchisee, and invest in a promising partnership.</p>
               <div>
                 <Link
                   to="#"
                   className="btn primary-btn rounded-full px-8 py-3 w-fit font-medium shadow-[0_0px_50px] shadow-blue-400/30 hover:shadow-blue-400/50 transotion duration-300"
                 >
-                  LEARN MORE
+                  JOIN TODAY
                   <LuArrowRight />
                 </Link>
               </div>
