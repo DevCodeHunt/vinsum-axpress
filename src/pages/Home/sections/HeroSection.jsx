@@ -23,7 +23,7 @@ const HeroSection = () => {
         setLoading(true);
         axios
           .get(
-            `https://testwebsiteapi.vinsumaxpress.com/api/DocketTracking?docketno=${values.docketNumber}&isDocket=${isTracking}`
+            `https://testwebsiteapi.vinsumaxpress.com/api/DocketTracking?docketno=${values.docketNumber}&isDocket=${!isTracking}`
           )
           .then((res) => {
             trackShipment.setShipment(res.data);

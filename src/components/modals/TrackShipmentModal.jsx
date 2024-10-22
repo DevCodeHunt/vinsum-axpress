@@ -28,13 +28,17 @@ const TrackShipmentModal = () => {
               <div className="flex items-center justify-between gap-4">
                 <span className="font-medium opacity-70">Dispatch Date:</span>
                 <span className="font-medium">
-                  {shipment?.docketInfo[0]["Booking Date"]}
+                  {shipment?.docketInfo[0]
+                    ? shipment?.docketInfo[0]["Booking Date"]
+                    : ""}
                 </span>
               </div>
               <div className="flex items-center justify-between gap-4">
                 <span className="font-medium opacity-70">Source Point:</span>
                 <span className="font-medium">
-                  {shipment?.docketInfo[0]["C/nor City"]}
+                  {shipment?.docketInfo[0]
+                    ? shipment?.docketInfo[0]["C/nor City"]
+                    : ""}
                 </span>
               </div>
               <div className="flex items-center justify-between gap-4">
@@ -42,7 +46,9 @@ const TrackShipmentModal = () => {
                   Destination Point:
                 </span>
                 <span className="font-medium">
-                  {shipment?.docketInfo[0]["C/nee City"]}
+                  {shipment?.docketInfo[0]
+                    ? shipment?.docketInfo[0]["C/nee City"]
+                    : ""}
                 </span>
               </div>
             </div>
@@ -55,9 +61,7 @@ const TrackShipmentModal = () => {
                 alt="shipment-progress"
                 className="w-8"
               />
-              <h1 className="text-lg font-bold">
-                Shipment Progress
-              </h1>
+              <h1 className="text-lg font-bold">Shipment Progress</h1>
             </div>
 
             <div className="relative overflow-x-auto my-4">
