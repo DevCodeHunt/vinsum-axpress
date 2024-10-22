@@ -23,11 +23,9 @@ const HeroSection = () => {
         setLoading(true);
         axios
           .get(
-            `https://testwebsiteapi.vinsumaxpress.com/api/DocketTracking?docketno=${values.docketNumber}`
+            `https://testwebsiteapi.vinsumaxpress.com/api/DocketTracking?docketno=${values.docketNumber}&isDocket=${isTracking}`
           )
           .then((res) => {
-            console.log(res.data);
-
             trackShipment.setShipment(res.data);
             trackShipment.onOpen();
             setLoading(false);
@@ -44,22 +42,23 @@ const HeroSection = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className="h-screen py-10 relative"
+        className="min-h-screen py-10 relative"
       >
-        <div className="wrapper text-white absolute inset-0 z-10 flex flex-col justify-center pt-56">
+        <div className="wrapper text-white absolute inset-0 z-10 flex flex-col justify-center md:pt-64 min-[526px]:pt-40 pt-56">
           <div className=" flex md:flex-row flex-col gap-6">
             <motion.div
               variants={fadeIn("right", "tween", 0.2, 1)}
               className="flex-1"
             >
-              <h1 className="sm:text-6xl text-5xl font-bold uppercase leading-tight">
+              <h1 className="md:text-6xl sm:text-4xl text-3xl font-bold uppercase leading-tight">
                 WE WILL <span className="text-primary">DELIVER</span>{" "}
                 <br className="md:inline-block hidden" /> YOUR PACKAGE ALL{" "}
                 <br className="md:inline-block hidden" /> OVER{" "}
                 <span className="text-primary">THE WORLD.</span>
               </h1>
+           
 
-              <h1 className="slider_catchphrase bg-foreground rounded p-1 px-1 w-fit mt-5 isolate bg-white/20 shadow-lg ring-1 ring-black/5">
+              <h1 className="slider_catchphrase bg-foreground rounded p-1 px-1 sm:w-fit w-full mt-5 isolate bg-white/20 shadow-lg ring-1 ring-black/5">
                 <span className="slider">
                   <span className="slider__word">
                     “Lightning-fast delivery!”
@@ -73,25 +72,6 @@ const HeroSection = () => {
                 </span>
               </h1>
             </motion.div>
-
-            {/* <motion.div
-          variants={fadeIn("left", "tween", 0.2, 1)}
-          className="w-72 space-y-6"
-        >
-          <p>
-            The faster, easiest way to book and manage your international
-            shipments.
-          </p>
-          <div>
-            <Link
-              to="#"
-              className="btn primary-btn rounded-full px-8 py-3 w-fit font-medium shadow-[0_0px_50px] shadow-blue-400/30 hover:shadow-blue-400/50 transotion duration-300"
-            >
-              LEARN MORE
-              <LuArrowRight />
-            </Link>
-          </div>
-        </motion.div> */}
           </div>
 
           <div className="py-10">
@@ -129,7 +109,11 @@ const HeroSection = () => {
                   name="docketNumber"
                   value={formik.values.docketNumber}
                   onChange={formik.handleChange}
-                  placeholder="Enter your docket number"
+                  placeholder={
+                    isTracking
+                      ? "Enter your invoice number"
+                      : "Enter your docket number"
+                  }
                 />
 
                 <button
