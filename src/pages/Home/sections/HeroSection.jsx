@@ -119,7 +119,7 @@ const HeroSection = () => {
                   onChange={formik.handleChange}
                   placeholder={
                     isTracking
-                      ? "Enter your docket invoice number"
+                      ? "Enter your docket number"
                       : "Enter your invoice number"
                   }
                 />
