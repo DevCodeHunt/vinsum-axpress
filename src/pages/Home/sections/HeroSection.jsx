@@ -8,6 +8,7 @@ import { useTrackShipmentStore } from "../../../stores";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { LuArrowRight } from "react-icons/lu";
+import { ROUTES } from "../../../utils/routes";
 //1000033772
 const HeroSection = () => {
   const [isTracking, setIsTracking] = useState(false);
@@ -84,7 +85,7 @@ const HeroSection = () => {
             </motion.div>
           </div>
 
-          <div className="py-10 grid md:grid-cols-2 gap-6">
+          <div className="py-10 grid md:grid-cols-2 gap-6 relative">
             <motion.div
               variants={fadeIn("up", "tween", 0.2, 1)}
               className="min-[576px]:w-96 border rounded-2xl p-4 space-y-10 bg-white text-black shadow isolate bg-white/20 shadow-lg ring-1 ring-black/5"
@@ -159,18 +160,18 @@ const HeroSection = () => {
 
             <motion.div
               variants={fadeIn("left", "tween", 0.2, 1)}
-              className="w-72 space-y-6 md:ml-auto"
+              className="space-y-6 md:ml-auto"
             >
-              <p>Become a franchisee, and invest in a promising partnership.</p>
-              <div>
-                <Link
-                  to="#"
-                  className="btn primary-btn rounded-full px-8 py-3 w-fit font-medium shadow-[0_0px_50px] shadow-blue-400/30 hover:shadow-blue-400/50 transotion duration-300"
-                >
-                  JOIN TODAY
-                  <LuArrowRight />
-                </Link>
-              </div>
+              
+              <p className="max-w-72">Become a franchisee, and invest in  a promising partnership.</p>
+              <Link
+                to={ROUTES.FRANCHISE}
+                role="button"
+                className="btn primary-btn cursor-pointer w-fit"
+              >
+                JOIN TODAY
+                <LuArrowRight size={18} />
+              </Link>
             </motion.div>
           </div>
         </div>
@@ -181,7 +182,7 @@ const HeroSection = () => {
           autoPlay
           title="Video Indroduction"
           poster="https://cdn.pixabay.com/photo/2014/09/11/22/00/dock-441989_1280.jpg"
-          className="w-full h-full absolute inset-0 object-cover brightness-50"
+          className="w-full h-full absolute inset-0 pointer-events-none object-cover brightness-50 -z-2"
         >
           <source src="/videos/hero.mp4" type="video/mp4"></source>
         </video>

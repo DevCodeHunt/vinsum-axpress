@@ -4,4 +4,5 @@ export const ROUTES = {
   HOME: "/",
   SERVICE: "/service",
   CAREER: "/career",
+  FRANCHISE: "/franchise",
 };
