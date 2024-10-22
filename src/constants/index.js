@@ -1,4 +1,11 @@
-import { BriefcaseMedical, Building2, Code, Database, Megaphone, PenTool } from "lucide-react";
+import {
+  BriefcaseMedical,
+  Building2,
+  Code,
+  Database,
+  Megaphone,
+  PenTool,
+} from "lucide-react";
 import { ROUTES } from "../utils/routes";
 
 export const navLinks = [
@@ -34,31 +41,37 @@ export const companyDetail = {
 
 export const aboutCards = [
   {
+    image: "/images/real-time-locator.svg",
     title: "Real Time Tracking",
     description:
       "Experience immediate updates and reduced concerns. Prepare to engage with the future of logistics, where efficiency and reliability are paramount.",
   },
   {
+    image: "/images/safe-delivery.svg",
     title: "Damage-free Delivery",
     description:
       "Count on us to ensure damage-free delivery with every shipment, setting the standard for excellence!",
   },
   {
+    image: "/images/customized-packaging.svg",
     title: "Flexible Packaging Service",
     description:
       "We offer Versatile Packaging that provides limitless possibilities to meet the diverse needs of your organization effectively.",
   },
   {
+    image: "/images/warehouse-service.svg",
     title: "Warehouse Services",
     description:
       "Streamline your warehouse, supercharge your efficiency! From storage to shipping, our smart solutions keep your operations moving at the speed of success.",
   },
   {
+    image: "/images/tech-driven.svg",
     title: "Tech-Driven Solutions",
     description:
       "Unlock the future with tech-driven solutions that turn challenges into opportunities! Let innovation lead the way to smarter, faster, and more connected possibilities.",
   },
   {
+    image: "/images/24-customer-support.svg",
     title: "24/7 Customer Support",
     description:
       "We are Here for You Around the Clock: Just a call away, our dedicated team is ready to assist 24/7",

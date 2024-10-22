@@ -52,7 +52,7 @@ const AboutSection = () => {
                 onClick={() => handleClick(index)}
                 className={`bg-white  border drop-shadow w-full rounded-2xl p-6 space-y-4 hover:bg-primary hover:text-white transition duration-300 group cursor-pointer`}
               >
-                <h2 className="font-bold text-4xl">O{index + 1}</h2>
+                <img src={obj.image} alt="about-image" className="w-14" />
                 <h1 className="font-semibold text-2xl">{obj.title}</h1>
                 <p className="text-text text-sm group-hover:text-white">
                   {obj.description}
