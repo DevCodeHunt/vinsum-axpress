@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { fadeIn, fadeInOpacity, zoomIn } from "../../../utils/motion";
 
 const ServiceSection = () => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState();
 
   const handleActive = useCallback(
     (index) => setActive((prevActive) => (prevActive === index ? null : index)),
@@ -66,7 +66,7 @@ const ServiceSection = () => {
                   <div className="flex items-center justify-between cursor-pointer">
                     <h1 className="text-3xl font-semibold">
                       <span className="text-primary">{title[0]} </span>
-                      {title[1]}
+                      {title[1]} {title[2]} {title[3]}
                     </h1>
                     <LuArrowDownRight
                       size={38}

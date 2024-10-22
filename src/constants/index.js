@@ -51,12 +51,12 @@ export const aboutCards = [
   {
     title: "Warehouse Services",
     description:
-      "Vinsum has outlets that are open 24 hours in major cities in India.",
+      "Streamline your warehouse, supercharge your efficiency! From storage to shipping, our smart solutions keep your operations moving at the speed of success.",
   },
   {
-    title: "Tech Driven Solutions",
+    title: "Tech-Driven Solutions",
     description:
-      "We provide packaging services. tell our staff if you need this service, our staff will be happy to help you.",
+      "Unlock the future with tech-driven solutions that turn challenges into opportunities! Let innovation lead the way to smarter, faster, and more connected possibilities.",
   },
   {
     title: "24/7 Customer Support",
@@ -67,19 +67,24 @@ export const aboutCards = [
 
 export const serviceQuestions = [
   {
-    title: "Worldwide Shipping",
+    title: "Multimodal Transportation",
     description:
-      "Not only serving inter-city delivery, but Vinsum also serves inter-country delivery at an affordable cost and also includes taxes and so on.",
+      "Multimodal transport can ease the journey by optimizing routes and using the most efficient modes for each leg of the journey.",
   },
   {
-    title: "Sea Shipping",
+    title: "Warehouse Solution",
     description:
-      "Not only serving inter-city delivery, but Vinsum also serves inter-country delivery at an affordable cost and also includes taxes and so on.",
+      "We are offering wide range of services including consolidation & packaging of cargoes of various types & sizes.",
   },
   {
-    title: "Ground Shipping",
+    title: "Packaging Solutions",
     description:
-      "Not only serving inter-city delivery, but Vinsum also serves inter-country delivery at an affordable cost and also includes taxes and so on.",
+      "Dedicated solution design team that can design solutions based on inputs provided by the customer about the component / part and produce feasibility reports for all your packaging needs consultation.",
+  },
+  {
+    title: "Management (3LP & 4LP)",
+    description:
+      "Our Services often extend beyond logistics to include value-added services related to the production or procurement of goods, such as services that integrate parts of the supply chain.",
   },
 ];
 
