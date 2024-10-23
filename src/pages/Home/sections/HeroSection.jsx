@@ -85,10 +85,10 @@ const HeroSection = () => {
             </motion.div>
           </div>
 
-          <div className="py-10 grid md:grid-cols-2 gap-6 relative">
+          <div className="py-10 grid md:grid-cols-2 gap-6 ">
             <motion.div
               variants={fadeIn("up", "tween", 0.2, 1)}
-              className="min-[576px]:w-96 border rounded-2xl p-4 space-y-10 bg-white text-black shadow isolate bg-white/20 shadow-lg ring-1 ring-black/5"
+              className="max-w-96 w-full border rounded-2xl p-4 space-y-10 bg-white text-black shadow isolate bg-white/20 shadow-lg ring-1 ring-black/5"
             >
               <div className="flex items-center justify-between gap-3">
                 <span className="text-sm font-medium text-white">
@@ -158,12 +158,14 @@ const HeroSection = () => {
               </form>
             </motion.div>
 
+           
             <motion.div
               variants={fadeIn("left", "tween", 0.2, 1)}
-              className="space-y-6 md:ml-auto"
+              className="space-y-6 md:ml-auto h-fit"
             >
-              
-              <p className="max-w-72">Become a franchisee, and invest in  a promising partnership.</p>
+              <p className="">
+                Become a franchisee, and invest in br a promising partnership.
+              </p>
               <Link
                 to={ROUTES.FRANCHISE}
                 role="button"
@@ -182,7 +184,7 @@ const HeroSection = () => {
           autoPlay
           title="Video Indroduction"
           poster="https://cdn.pixabay.com/photo/2014/09/11/22/00/dock-441989_1280.jpg"
-          className="w-full h-full absolute inset-0 pointer-events-none object-cover brightness-50 -z-2"
+          className="w-full h-full absolute inset-0 object-cover brightness-50"
         >
           <source src="/videos/hero.mp4" type="video/mp4"></source>
         </video>
