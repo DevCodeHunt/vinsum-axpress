@@ -7,6 +7,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import ChatBot from "./components/ChatBot";
 import { ROUTES } from "./utils/routes";
 import TrackShipmentModal from "./components/modals/TrackShipmentModal";
+import MediaGalleryModal from "./components/modals/MediaGalleryModal";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -21,10 +22,12 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
-      <ChatBot />
-      <Navbar />
-      <TrackShipmentModal />
+
       <Suspense>
+        <ChatBot />
+        <Navbar />
+        <TrackShipmentModal />
+        <MediaGalleryModal />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -37,8 +40,8 @@ export default function App() {
             <Route path="/blog/:id" element={<BlogDetail />} />
           </Routes>
         </main>
+        <Footer />
       </Suspense>
-      <Footer />
 
       <Toaster
         toastOptions={{

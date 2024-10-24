@@ -17,3 +17,11 @@ export const useTrackShipmentStore = create((set) => ({
   shipment: null,
   setShipment: (shipment) => set({ shipment }),
 }));
+
+export const useMediaGalleryStore = create((set) => ({
+  open: false,
+  onOpen: () => set({ open: true }),
+  onClose: () => set({ open: false, media: null }),
+  media: null,
+  setMedia: (media) => set({ media }),
+}));

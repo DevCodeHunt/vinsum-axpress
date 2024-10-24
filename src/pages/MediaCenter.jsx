@@ -6,9 +6,11 @@ import { blogs, galleries } from "../constants";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import AnimationWrapper from "../components/AnimationWrapper";
-
+import { useMediaGalleryStore } from "../stores";
+import { useCallback } from "react";
 
 const MediaCenter = () => {
+  const { setMedia, onOpen } = useMediaGalleryStore();
   const handleSubscribe = (values) => {
     if (!values.email) {
       toast.error("Email field is required");
@@ -22,6 +24,14 @@ const MediaCenter = () => {
 
     toast.success(`Thanks for susbcribing ${values.email}`);
   };
+
+  const handleMediaGalleryOpen = useCallback(
+    (media) => {
+      setMedia(media);
+      onOpen(true);
+    },
+    [onOpen, setMedia]
+  );
 
   return (
     <AnimationWrapper>
@@ -128,7 +138,7 @@ const MediaCenter = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {galleries.map((image, index) => (
               <div key={index} className="grid gap-4">
-                <div className="">
+                <div className="cursor-pointer" onClick={() => handleMediaGalleryOpen(image)}>
                   <img
                     className="h-auto max-w-full rounded-lg"
                     src={image}
@@ -140,8 +150,6 @@ const MediaCenter = () => {
           </div>
         </div>
       </section>
-
-    
     </AnimationWrapper>
   );
 };
