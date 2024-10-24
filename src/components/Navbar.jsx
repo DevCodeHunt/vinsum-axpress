@@ -30,7 +30,7 @@ const Navbar = () => {
     <header
       className={` ${
         pathname === "/" ? "fixed text-white" : "sticky bg-neutral-50 border-b"
-      } ${navBg ? "bg-neutral-50 !text-black" : " bg-white/20 shadow-lg"} top-0 left-0 right-0 w-full z-50`}
+      } ${navBg ? "bg-neutral-50 !text-black" : " bg-white/20 shadow-lg"} top-0 left-0 right-0 z-50 w-full`}
     >
       <div className="py-3 wrapper flex items-center justify-between gap-4">
         <div>

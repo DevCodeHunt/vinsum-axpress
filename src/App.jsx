@@ -14,6 +14,8 @@ const Service = lazy(() => import("./pages/Service"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Career = lazy(() => import("./pages/Career"));
 const Franchise = lazy(() => import("./pages/Franchise"));
+const MediaCenter = lazy(() => import("./pages/MediaCenter"));
+const BlogDetail = lazy(() => import("./pages/BlogDetail/BlogDetail"));
 
 export default function App() {
   return (
@@ -31,6 +33,8 @@ export default function App() {
             <Route path={ROUTES.CONTACT} element={<Contact />} />
             <Route path={ROUTES.CAREER} element={<Career />} />
             <Route path={ROUTES.FRANCHISE} element={<Franchise />} />
+            <Route path={ROUTES.MEDIACENTER} element={<MediaCenter />} />
+            <Route path="/blog/:id" element={<BlogDetail />} />
           </Routes>
         </main>
       </Suspense>

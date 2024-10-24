@@ -22,6 +22,10 @@ export const navLinks = [
     url: ROUTES.SERVICE,
   },
   {
+    label: "Media Center",
+    url: ROUTES.MEDIACENTER,
+  },
+  {
     label: "Career",
     url: ROUTES.CAREER,
   },

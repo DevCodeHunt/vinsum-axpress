@@ -17,6 +17,7 @@ const validationSchema = Yup.object({
     .trim(),
   address: Yup.string().required("Address is required").trim(),
   remarks: Yup.string().required("Remarks is required").trim(),
+  service: Yup.string().required("Please select atleast one service.").trim(),
 });
 const initialValues = {
   panNumber: "",
@@ -24,6 +25,7 @@ const initialValues = {
   mobile: "",
   address: "",
   remarks: "",
+  service: "",
 };
 
 const Franchise = () => {
@@ -93,11 +95,38 @@ const Franchise = () => {
             <Input
               id="remarks"
               name="remarks"
-              label="Pan Number"
+              label="Remarks"
               value={formik.values.remarks}
               onChange={formik.handleChange}
               error={formik.errors.remarks}
             />
+            <div className="space-y-2">
+              <p>You are a</p>
+              <div className="space-y-2">
+                {["Booking Agent", "Delivery Agent", "Vendor/Partner"].map(
+                  (value) => (
+                    <label
+                      key={value}
+                      htmlFor={value}
+                      className="flex items-center gap-2"
+                    >
+                      <input
+                        type="radio"
+                        id={value}
+                        name={value}
+                        checked={formik.values.service === value}
+                        value={formik.values.service}
+                        onChange={() => formik.setFieldValue("service", value)}
+                        className="peer sr-only"
+                      />
+                      <div className="relative w-5 h-5 rounded-full bg-gray-300 cursor-pointer peer-checked:bg-blue-600 before:content-[''] before:absolute before:w-2 before:h-2 before:peer-checked:bg-white before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full "></div>
+                      <span>{value}</span>
+                    </label>
+                  )
+                )}
+                <small className="text-rose-600">{formik.errors.service}</small>
+              </div>
+            </div>
             <div className="flex items-center gap-4">
               <button type="submit" className="btn primary-btn">
                 {" "}

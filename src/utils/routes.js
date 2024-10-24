@@ -5,4 +5,5 @@ export const ROUTES = {
   SERVICE: "/service",
   CAREER: "/career",
   FRANCHISE: "/franchise",
+  MEDIACENTER: "/media-center",
 };
