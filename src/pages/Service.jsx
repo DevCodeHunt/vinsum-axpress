@@ -18,16 +18,19 @@ import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../utils/motion";
 import { useMediaQuery } from "react-responsive";
 import AnimationWrapper from "../components/AnimationWrapper";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../utils/routes";
 
 const Services = () => {
   const desktop = useMediaQuery({ query: "(min-width: 768px)" });
+  const navigate = useNavigate()
   return (
     <>
       <section className="wrapper py-8">
         <div
           style={{
             backgroundImage:
-              "url(https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1532601224476-15c79f2f7a51?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+              "url(/images/warehouse-climate-control.jpg)",
           }}
           className="wrapper  relative w-full rounded-3xl min-h-[90vh] bg-cover bg-no-repeat"
         >
@@ -51,11 +54,11 @@ const Services = () => {
                 New Energy for the future
               </h1>
               <div className="flex items-center gap-6">
-                <button className="btn border-b-2 !rounded-none border-white">
+                <button type="button" onClick={() => navigate(ROUTES.CONTACT)} className="btn border-b-2 !rounded-none border-white">
                   Get in touch <ArrowUpRight />
                 </button>
-                <button className="btn border-b-2 !rounded-none border-white">
-                  Our services <ArrowUpRight />
+                <button type="button" onClick={() => navigate(ROUTES.FRANCHISE)} className="btn border-b-2 !rounded-none border-white">
+                  Become Franchisee <ArrowUpRight />
                 </button>
               </div>
             </motion.div>
@@ -65,7 +68,7 @@ const Services = () => {
               className="w-[300px] h-[300px] flex flex-col justify-between rounded-3xl mx-auto bg-white/40 p-2"
             >
               <img
-                src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1532601224476-15c79f2f7a51?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="/images/professional-packer-wrapping-electronic-equipment-with-bubble-wrap-hightech-industrial-packing-area.jpg"
                 alt="image"
                 className="rounded-2xl w-[200px] h-[200px] object-cover"
               />
@@ -167,6 +170,26 @@ const Services = () => {
               Medtronic
             </AnimationWrapper>
           </motion.div>
+        </motion.div>
+      </section>
+
+      <section className="py-20">
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}
+          className="wrapper"
+        >
+          <motion.h1
+            variants={fadeIn("right", "tween", 0.2, 1)}
+            className="text-center text-4xl max-w-md mx-auto mb-12"
+          >
+            See how we solve problems,{" "}
+            <span className="opacity-50">right on target</span>
+          </motion.h1>
+
+          <Cards />
         </motion.div>
       </section>
 
@@ -328,25 +351,7 @@ const Services = () => {
         </motion.div>
       </section>
 
-      <section className="py-20">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: false, amount: 0.25 }}
-          className="wrapper"
-        >
-          <motion.h1
-            variants={fadeIn("right", "tween", 0.2, 1)}
-            className="text-center text-4xl max-w-md mx-auto mb-12"
-          >
-            See how we solve problems,{" "}
-            <span className="opacity-50">right on target</span>
-          </motion.h1>
-
-          <Cards />
-        </motion.div>
-      </section>
+     
     </>
   );
 };
@@ -419,7 +424,7 @@ const Cards = () => {
                   variants={fadeIn("up", "tween", 0.2, 1)}
                   src={obj.image}
                   alt={obj.name}
-                  className="rounded-lg object-cover aspect-auto"
+                  className="rounded-lg object-cover aspect-video my-auto"
                 />
               </div>
             </SwiperSlide>
