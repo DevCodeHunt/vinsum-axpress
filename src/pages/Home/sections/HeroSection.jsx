@@ -163,8 +163,8 @@ const HeroSection = () => {
               variants={fadeIn("left", "tween", 0.2, 1)}
               className="space-y-6 md:ml-auto h-fit"
             >
-              <p className="">
-                Become a franchisee, and invest in br a promising partnership.
+              <p className="max-w-72">
+                Become a franchisee, and invest in  a promising partnership.
               </p>
               <Link
                 to={ROUTES.FRANCHISE}

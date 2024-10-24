@@ -1,31 +1,31 @@
 import { MdOutlineChatBubble } from "react-icons/md";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { BsSendFill } from "react-icons/bs";
 import { useFormik } from "formik";
+import { useChatBotStore } from "../stores";
 
 const ChatBot = () => {
   const buttonRef = useRef(null);
   const chatbotRef = useRef(null);
 
-  const [show, setShow] = useState("");
-
-  const handleClickOutside = (event) => {
-    if (
-      chatbotRef.current &&
-      !chatbotRef.current.contains(event.target) &&
-      !buttonRef.current.contains(event.target)
-    ) {
-      setShow(false);
-    }
-  };
+  const { open, onClose, onToggle } = useChatBotStore();
 
   useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        chatbotRef.current &&
+        !chatbotRef.current.contains(event.target) &&
+        !buttonRef.current.contains(event.target)
+      ) {
+        onClose();
+      }
+    };
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
-  const toggleChatbot = useCallback(() => setShow((prev) => !prev), []);
+  }, [onClose]);
+  const toggleChatbot = useCallback(() => onToggle(), [onToggle]);
 
   const formik = useFormik({
     initialValues: { message: "" },
@@ -33,8 +33,6 @@ const ChatBot = () => {
       console.log(values);
     },
   });
-
- 
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
@@ -49,7 +47,7 @@ const ChatBot = () => {
       <div
         ref={chatbotRef}
         className={`absolute bottom-14 rounded min-[576px]:w-[400px] w-[300px] right-0  bg-white shadow drop-shadow-xl  ${
-          show ? "opacity-100" : "opacity-0"
+          open ? "block" : "hidden"
         }  transition-all duration-300`}
       >
         <div className="h-16 border-b border-neutral-200 absolute left-0 right-0 top-0 bg-white z-10"></div>
@@ -62,7 +60,7 @@ const ChatBot = () => {
           <Message />
           <Message />
         </div>
-       
+
         <form
           onSubmit={formik.handleSubmit}
           className="left-0 right-0 h-16 p-4 absolute bottom-0 w-full border-t border-neutral-200 flex items-center gap-2 bg-white z-10"

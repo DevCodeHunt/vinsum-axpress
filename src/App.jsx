@@ -8,6 +8,7 @@ import ChatBot from "./components/ChatBot";
 import { ROUTES } from "./utils/routes";
 import TrackShipmentModal from "./components/modals/TrackShipmentModal";
 import MediaGalleryModal from "./components/modals/MediaGalleryModal";
+import { useMediaGalleryStore, useTrackShipmentStore } from "./stores";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -19,6 +20,8 @@ const MediaCenter = lazy(() => import("./pages/MediaCenter"));
 const BlogDetail = lazy(() => import("./pages/BlogDetail/BlogDetail"));
 
 export default function App() {
+  const isMediaGalleryOpen = useMediaGalleryStore((state) => state.open);
+  const isTrackShipmentOpen = useTrackShipmentStore((state) => state.open);
   return (
     <>
       <ScrollToTop />
@@ -26,8 +29,8 @@ export default function App() {
       <Suspense>
         <ChatBot />
         <Navbar />
-        <TrackShipmentModal />
-        <MediaGalleryModal />
+        {isTrackShipmentOpen && <TrackShipmentModal />}
+        {isMediaGalleryOpen && <MediaGalleryModal />}
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
